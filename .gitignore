@@ -1,7 +1,9 @@
 # ===========================
 # Default Collab Ignore Rules
 # ===========================
-
+*.Log
+Logs
+Logs/
 # OS Generated
 # ============
 .DS_Store
