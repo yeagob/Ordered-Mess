@@ -408,8 +408,7 @@ MonoBehaviour:
   m_text: I have read and agree to the <color=#3BD93B>Terms of Service</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -732,8 +731,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1377,8 +1375,7 @@ MonoBehaviour:
   m_text: User Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1929,8 +1926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-    type: 3}
+  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1969,10 +1965,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
-    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
+    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
+    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2594,8 +2588,7 @@ MonoBehaviour:
   m_text: Possible error message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2730,8 +2723,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3001,8 +2993,7 @@ MonoBehaviour:
   m_text: Email
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3137,8 +3128,7 @@ MonoBehaviour:
   m_text: Login
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3272,8 +3262,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-    type: 3}
+  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3312,10 +3301,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
-    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
+    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
+    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -3398,8 +3385,7 @@ MonoBehaviour:
   m_text: Password
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3732,8 +3718,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3945,8 +3930,7 @@ MonoBehaviour:
   m_text: Password
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4176,8 +4160,7 @@ MonoBehaviour:
   m_text: Possible error message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4312,8 +4295,7 @@ MonoBehaviour:
   m_text: User Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4448,8 +4430,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4637,8 +4618,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4871,8 +4851,7 @@ MonoBehaviour:
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5222,8 +5201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-    type: 3}
+  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5262,10 +5240,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
-    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
+    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
+    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -5348,8 +5324,7 @@ MonoBehaviour:
   m_text: Register now
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5483,8 +5458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-    type: 3}
+  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5523,10 +5497,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
-    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
+    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
+    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -5608,8 +5580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-    type: 3}
+  m_Sprite: {fileID: 2882522968283730838, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -5648,10 +5619,8 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
-    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c,
-      type: 3}
+    m_HighlightedSprite: {fileID: 1596879827854663076, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
+    m_PressedSprite: {fileID: 3209912182787174284, guid: 1a3564732c3364b449cc3d03bf4bd40c, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -6045,8 +6014,7 @@ MonoBehaviour:
   m_text: Possible error message
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6181,8 +6149,7 @@ MonoBehaviour:
   m_text: Forgot Password?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6317,8 +6284,7 @@ MonoBehaviour:
   m_text: User Name / Email
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6764,8 +6730,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9070519338900415644, guid: 21932d6e4a872ae4cac314bfd7233808,
-    type: 3}
+  m_Sprite: {fileID: -9070519338900415644, guid: 21932d6e4a872ae4cac314bfd7233808, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7175,8 +7140,8 @@ MonoBehaviour:
     data corruption, databases or software, special, indirect or consequential damages.\r\n\r\n\r\n<b>12.
     Resolution and effects.\r</b>\nMannaz may terminate this Agreement by providing
     you with a written termination notice. For your part, you may terminate this
-    Agreement by removing the Software from all your media and storage devices.\r\n\r\n
-    Upon termination of this Agreement, all its provisions will cease to be in force,
+    Agreement by removing the Software from all your media and storage devices.\r\n\r\nUpon
+    termination of this Agreement, all its provisions will cease to be in force,
     except for the following provisions of this Agreement, which will continue in
     force (in accordance with their express validity periods or, failing that, indefinitely):
     Clauses 4, 6, 7, 9 and 10.\r\n\r\n\r\n<b>13. General disposition\r</b>\nIf a
@@ -7206,8 +7171,7 @@ MonoBehaviour:
     the jurisdiction of the Courts and Tribunals of Donostia-San Sebasti\xE1n.\r\n\r\n\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ae27ba78990824895b457d82198728, type: 2}
-  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728,
-    type: 2}
+  m_sharedMaterial: {fileID: 3277058788059478506, guid: 41ae27ba78990824895b457d82198728, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
