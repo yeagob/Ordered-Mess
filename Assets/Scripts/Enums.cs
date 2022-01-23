@@ -1,6 +1,8 @@
 public enum Scenes
 {
     Login,
+    MainMenu,
+    InGame,
 
 }
 public enum HousePropType
