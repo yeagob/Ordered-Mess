@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,11 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private Animator targetAnimator;
 
     private bool walk = false;
+
+    //Events
+    internal static event Action walkEvent;
+    internal static event Action walkStopEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,16 +40,24 @@ public class CharacterController : MonoBehaviour
             this.hip.AddForce(direction * this.speed);
 
             this.walk = true;
+
+            if (walkEvent != null)
+                walkEvent();
+
         }  else {
             this.walk = false;
+
+            if (walkStopEvent != null)
+                walkStopEvent();
         }
 
         this.targetAnimator.SetBool("Walk", this.walk);
 
-        if (Input.GetKey(KeyCode.Mouse0))
+
+        if (Input.GetButton("Fire1"))
             this.targetAnimator.SetBool("Grab", true);
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetButtonUp("Fire1"))
             this.targetAnimator.SetBool("Grab", false);
     }
 }
