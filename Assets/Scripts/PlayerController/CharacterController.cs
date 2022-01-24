@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,19 +14,25 @@ public class CharacterController : MonoBehaviour
 
     private bool walk = false;
 
+    private PhotonView photonView;
+
     //Events
     internal static event Action walkEvent;
     internal static event Action walkStopEvent;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Authority
+        if (NetworkManager.instance.multiplayerOn && !photonView.IsMine)
+            return;
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 

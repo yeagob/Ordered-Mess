@@ -21,54 +21,12 @@ namespace Mannaz.InGame
         [SerializeField]
         private ScrollRect searchTextScroll;
 
-        [SerializeField] private ParticleSystem backgroundParticles;
-        [SerializeField] private GameObject explosionRuneParticles;
-        [SerializeField] private GameObject endExplosionParticles;
-        [SerializeField] private GameObject chargingParticles;
-
-        [Header("UI Versus")]
-        [SerializeField] GameObject panelVersus;
-        [SerializeField] GameObject particlesAndEffectsForVersus;
-
 
         private void Start()
         {
-            backgroundParticles.gameObject.SetActive(true);
-            particlesAndEffectsForVersus.SetActive(false);
-            panelVersus.SetActive(false);
             cancelRoomBtn.onClick.AddListener(NetworkManager.instance.BackToLobby);
         }
 
-        #region Animation Events
-        public void ShowExplosion()
-        {
-            explosionRuneParticles.SetActive(true);
-            //TODO: Añadir sonido
-        }
-
-        public void ShowEndExplosion()
-        {
-            endExplosionParticles.SetActive(true);
-        }
-
-        public void ShowChargingParticles()
-        {
-            chargingParticles.SetActive(true);
-        }
-
-        public void AccelerateBGParticles()
-        {
-            ParticleSystem.ForceOverLifetimeModule forceOverLifetime = backgroundParticles.forceOverLifetime;
-            forceOverLifetime.y = 20;
-        }
-
-        public void ResetBGParticles()
-        {
-            ParticleSystem.ForceOverLifetimeModule forceOverLifetime = backgroundParticles.forceOverLifetime;
-            forceOverLifetime.y = 3.23f;
-        }
-
-        #endregion
         
         #region Methods
 
@@ -96,24 +54,6 @@ namespace Mannaz.InGame
             Canvas.ForceUpdateCanvases();
         }
 
-
-        internal IEnumerator StartAnimationAndShowVersus()
-        {
-            cancelRoomBtn.gameObject.SetActive(false);
-            Animator anim = GetComponent<Animator>();
-            anim.SetTrigger("StartGame");
-            float animationDuration = anim.GetCurrentAnimatorStateInfo(0).length + anim.GetCurrentAnimatorStateInfo(0).normalizedTime + 1f;
-            
-            yield return new WaitForSeconds(animationDuration);
-            
-            gameObject.SetActive(false);
-            //particlesAndEffectsForVersus.SetActive(true);
-           
-            //TODO: Refactor!!
-            //Start Versus processs Animation & StartGame
-            panelVersus.SetActive(true);
-
-        }
         #endregion
     }
 }
