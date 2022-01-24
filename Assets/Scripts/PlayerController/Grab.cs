@@ -9,10 +9,17 @@ public class Grab : MonoBehaviour
     public bool objectPicked = false;
 
     private GameObject pickupGO;
+    private float throwForce = 10;
 
     //Events
-    internal static event Action grabEvent;
-    internal static event Action throwEvent;
+    internal static event Action<HouseProps> OnGrabEvent;
+    internal static event Action<HouseProps> OnThrowEvent;
+    internal static event Action<HouseProps> OnReleaseEvent;
+
+    private void Start()
+    {
+        InGameController.instance.OnStartGame += LoadPlayerProfile;
+    }
 
     private void Update()
     {
@@ -27,6 +34,9 @@ public class Grab : MonoBehaviour
                 pickupGO = null;
 
                 objectPicked = false;
+
+                if (OnReleaseEvent != null)
+                    OnReleaseEvent(pickupGO.GetComponent<HouseProps>());
             }
         }
 
@@ -38,14 +48,14 @@ public class Grab : MonoBehaviour
 
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.transform.parent = null;
-                pickupGO.GetComponent<Rigidbody>().AddForce(10, 10, 10, ForceMode.Impulse);
+                pickupGO.GetComponent<Rigidbody>().AddForce(throwForce, throwForce, throwForce, ForceMode.Impulse);
                 pickupGO = null;
 
                 //Delay to not pick up again the object while pressing Fire1 and throwing
                 Invoke(nameof(DelayObjectPicked), 0.2f);
 
-                if(throwEvent != null)
-                throwEvent();
+                if(OnThrowEvent != null)
+                    OnThrowEvent(pickupGO.GetComponent<HouseProps>());
             }
         }
     }
@@ -65,8 +75,8 @@ public class Grab : MonoBehaviour
 
                 objectPicked = true;
 
-                if (grabEvent != null)
-                    grabEvent();
+                if (OnGrabEvent != null)
+                    OnGrabEvent(other.GetComponent<HouseProps>());
             }
         }
     }
@@ -75,4 +85,10 @@ public class Grab : MonoBehaviour
     {
         objectPicked = false;
     }
+
+    private void LoadPlayerProfile()
+    {
+        throwForce = PlayerProfile.instance.throwObjectsForce;
+    }
+
 }

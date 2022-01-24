@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 50f;
+    [SerializeField] private float speedRun = 100f;
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Rigidbody hip;
 
@@ -20,10 +21,15 @@ public class CharacterController : MonoBehaviour
     internal static event Action walkEvent;
     internal static event Action walkStopEvent;
 
+    //Hip for Cinemachine
+    public Transform hipTransform;
+
     // Start is called before the first frame update
     void Awake()
     {
         photonView = GetComponent<PhotonView>();
+
+        InGameController.instance.OnStartGame += LoadPlayerProfile;
     }
 
     // Update is called once per frame
@@ -40,6 +46,12 @@ public class CharacterController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            //Run
+            if (Input.GetKey(KeyCode.LeftShift))
+                this.speed = speedRun;
+            else
+                this.speed = 50;
+
             float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 
             this.hipJoint.targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
@@ -50,6 +62,7 @@ public class CharacterController : MonoBehaviour
 
             if (walkEvent != null)
                 walkEvent();
+
 
         }  else {
             this.walk = false;
@@ -66,5 +79,11 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetButtonUp("Fire1"))
             this.targetAnimator.SetBool("Grab", false);
+    }
+
+    private void LoadPlayerProfile()
+    {
+        speed = PlayerProfile.instance.playerSpeed;
+        speedRun = PlayerProfile.instance.playerSpeedRun;
     }
 }

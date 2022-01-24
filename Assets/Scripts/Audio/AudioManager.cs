@@ -12,16 +12,17 @@ public class AudioManager : MonoBehaviour
     {
         CharacterController.walkEvent += PlayWalkAudio;
         CharacterController.walkStopEvent += StopWalkAudio;
-        Grab.grabEvent += PlayGrabAudio;
-        Grab.throwEvent += PlayThrowAudio;
+        Grab.OnGrabEvent += PlayGrabAudio;
+        Grab.OnThrowEvent += PlayThrowAudio;
     }
+
 
     private void OnDestroy()
     {
         CharacterController.walkEvent -= PlayWalkAudio;
         CharacterController.walkStopEvent -= StopWalkAudio;
-        Grab.grabEvent -= PlayGrabAudio;
-        Grab.throwEvent -= PlayThrowAudio;
+        Grab.OnGrabEvent -= PlayGrabAudio;
+        Grab.OnThrowEvent -= PlayThrowAudio;
     }
 
     private void PlayWalkAudio()
@@ -30,13 +31,13 @@ public class AudioManager : MonoBehaviour
             audioSources[0].Play();
     }
 
-    private void PlayGrabAudio()
+    private void PlayGrabAudio(HouseProps obj)
     {
         if (!audioSources[1].isPlaying)
             audioSources[1].Play();
     }
 
-    private void PlayThrowAudio()
+    private void PlayThrowAudio(HouseProps obj)
     {
         if (!audioSources[2].isPlaying)
             audioSources[2].Play();
