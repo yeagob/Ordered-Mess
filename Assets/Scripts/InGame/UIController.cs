@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour
     public TextMeshProUGUI rondaText;
     public TextMeshProUGUI cronoText;
     public TextMeshProUGUI mensajeInicioRonda;
+    public TextMeshProUGUI localPlayerNameText;
+    public TextMeshProUGUI rivalPlayerNameText;
 
     [Header("Buttons")]
     public Button exitButton;
@@ -30,5 +32,11 @@ public class UIController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetPlayerName(string localPlayer, string otherPlayer)
+    {
+        localPlayerNameText.text = localPlayer;
+        rivalPlayerNameText.text = otherPlayer;
     }
 }
