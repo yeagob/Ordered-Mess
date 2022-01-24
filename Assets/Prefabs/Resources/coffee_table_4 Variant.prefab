@@ -132,10 +132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameObject: Table
-  _housePropEnum: 0
+  _roomType: 
   _amountPoints: 0
-  _vectSize: {x: 0, y: 0}
-  _toPickUp: 0
+  _baseSize: {x: 2, y: 1.5}
   _floorObject: 1
   _wallObject: 0
 --- !u!114 &-7835203456652049075
@@ -188,7 +187,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: -7835203456652049075}
+  - {fileID: 1188962569463697523}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

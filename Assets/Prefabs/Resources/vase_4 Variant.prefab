@@ -120,10 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameObject: Vase_02
-  _housePropEnum: 0
+  _roomType: 
   _amountPoints: 0
-  _vectSize: {x: 0, y: 0}
-  _toPickUp: 0
+  _baseSize: {x: 0.1, y: 0.1}
   _floorObject: 1
   _wallObject: 0
 --- !u!114 &-3283524285989195942

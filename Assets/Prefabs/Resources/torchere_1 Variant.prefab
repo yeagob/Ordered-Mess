@@ -212,9 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameObject: Lamp_01
-  _housePropEnum: 0
+  _roomType: 
   _amountPoints: 0
-  _vectSize: {x: 0, y: 0}
-  _toPickUp: 0
+  _baseSize: {x: 0.5, y: 2}
   _floorObject: 1
   _wallObject: 0
