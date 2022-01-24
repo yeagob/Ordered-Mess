@@ -17,9 +17,9 @@ namespace InGame
           [Header("Size")]
           public Vector2 _vectSize;
           [Header("Bools")]
-          public bool _toPickUp;
           public bool _floorObject;
           public bool _wallObject;
+          internal bool _objetctPicked;
           #endregion
           
           #region UnityCalls
