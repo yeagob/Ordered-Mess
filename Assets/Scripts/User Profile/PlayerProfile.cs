@@ -2,7 +2,6 @@
     public class PlayerProfile 
     {
         public string playerName = "";
-        public string schoolName = "";
         public int rank = 0;
         public int playedCount = 0;
         public int victoriesCount = 0;

@@ -67,7 +67,7 @@ using System;
             if (PhotonNetwork.PlayerList.Length == 2)
             {
                 Debug.Log("PLAYER 2");
-                photonView.RPC(nameof (StartGame), NetworkManager.instance.rpcTarget, ProfileControl.playerProfile.playerName, ProfileControl.playerProfile.schoolName);
+                photonView.RPC(nameof (StartGame), NetworkManager.instance.rpcTarget, ProfileControl.playerProfile.playerName);
                 StartLocalGame();
             }
         }
@@ -146,11 +146,11 @@ using System;
 
 
         [PunRPC]
-        public void StartGame(string oponentName, string oponentSchoolName)
+        public void StartGame(string oponentName)
         {
             //InGameController.instance.uiController.ShowOponentName(oponentName, oponentSchoolName);
 
-            photonView.RPC( nameof(SendInfoBack), rpcTarget, ProfileControl.playerProfile.playerName, ProfileControl.playerProfile.schoolName);
+            photonView.RPC( nameof(SendInfoBack), rpcTarget, ProfileControl.playerProfile.playerName);
             panelMatchmajing.SetActive(false);
             Debug.Log("RPC Start Game");
             //Event
@@ -159,11 +159,11 @@ using System;
         }
 
         [PunRPC]
-        public void SendInfoBack(string oponentName, string oponentSchoolName)
+        public void SendInfoBack(string oponentName)
         {
             //TODO: show eneme name
             //StartCoroutine(uiMatchmaking.StartAnimationAndShowVersus());
-            //InGameController.instance.uiController.ShowOponentName(oponentName, oponentSchoolName);
+            //InGameController.instance.uiController.ShowOponentName(oponentName);
 
         }
         #endregion

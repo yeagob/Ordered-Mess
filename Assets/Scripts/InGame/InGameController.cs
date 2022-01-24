@@ -21,25 +21,37 @@ public class InGameController : MonoBehaviour
 
     public static InGameController instance;
 
-    internal event Action OnStartGame;
+    public event Action OnStartGame;
 
     // Start is called before the first frame update
     void Awake()
     {
         instance = this;
-        networkManager.OnNetworkStartGame += StartGame;
+    }
 
+    private void Start()
+    {
         if (networkManager.multiplayerOn)
-            Destroy(player.gameObject);
+        {
+            networkManager.OnNetworkStartGame += StartGame;
+        }
+        else
+            StartGame();
     }
 
     internal void StartGame()
     {
-        //Player Instantiation
-        if (PhotonNetwork.IsMasterClient)
-            player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPlayer1.transform.position, playerPrefab.transform.rotation).GetComponent<CharacterController>();
-                else
-            player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPlayer2.transform.position, playerPrefab.transform.rotation).GetComponent<CharacterController>();
+        if (networkManager.multiplayerOn)
+        {
+            //Destroy Editor Player
+            Destroy(player.gameObject);
+
+            //Netwokr Player Instantiation
+            if (PhotonNetwork.IsMasterClient)
+                player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPlayer1.transform.position, playerPrefab.transform.rotation).GetComponent<CharacterController>();
+                    else
+                player = PhotonNetwork.Instantiate(playerPrefab.name, spawnPlayer2.transform.position, playerPrefab.transform.rotation).GetComponent<CharacterController>();
+        }
 
         //Cinemachine target
 

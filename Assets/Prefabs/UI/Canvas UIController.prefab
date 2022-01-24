@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 1254310076975510404}
   - component: {fileID: 5059106351388191803}
   - component: {fileID: 5435952282538010229}
+  - component: {fileID: 5841162681105800002}
   m_Layer: 5
   m_Name: Crono Text
   m_TagString: Untagged
@@ -339,6 +340,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5841162681105800002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088504691547255017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a574a71a8e829974eb2a19d125bf1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTimer: 10
+  timerIsRunning: 0
+  cronoText: {fileID: 5435952282538010229}
 --- !u!1 &3700351433423623263
 GameObject:
   m_ObjectHideFlags: 0
