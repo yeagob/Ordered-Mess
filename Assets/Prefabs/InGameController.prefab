@@ -472,7 +472,7 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 0}
-  sceneViewId: 2
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1557133199276074999
@@ -552,6 +552,7 @@ MonoBehaviour:
   - {fileID: -5388853077314654133, guid: ec6c9501bb3bbb84b81c089e428b2282, type: 3}
   - {fileID: 9088357523406171882, guid: 584b54c2f5e5215408bfdd87ec7da83e, type: 3}
   size: {x: 4, y: 1, z: 10}
+  objectOffser: 0.1
 --- !u!1 &6406432288462269380
 GameObject:
   m_ObjectHideFlags: 0
