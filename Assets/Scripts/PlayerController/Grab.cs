@@ -53,7 +53,7 @@ public class Grab : MonoBehaviour
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.GetComponent<HouseProps>().Release();
                 pickupGO.transform.parent = null;
-                pickupGO.GetComponent<Rigidbody>().AddForce(throwForce, throwForce, throwForce, ForceMode.Impulse);
+                pickupGO.GetComponent<Rigidbody>().AddForce(-Vector3.forward* throwForce, ForceMode.Impulse);
                 pickupGO = null;
 
                 //Delay to not pick up again the object while pressing Fire1 and throwing
