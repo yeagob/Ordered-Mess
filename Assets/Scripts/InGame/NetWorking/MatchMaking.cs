@@ -46,11 +46,19 @@ namespace Mannaz.InGame
         public override void OnConnectedToMaster()
         {            
             if (isConnecting)
-            {
+            {                
                 uiMatchmaking.LogFeedback("Connected to Master... ");
                 Debug.Log("PUN Basics Tutorial/Launcher: OnConnectedToMaster() was called by PUN. Now this client is connected and could join a room.\n Calling: PhotonNetwork.JoinRandomRoom(); Operation will fail if no room found");
-                JoinRoom();
+                
             }
+        }
+
+        public override void OnJoinedLobby()
+        {
+            base.OnJoinedLobby();
+            uiMatchmaking.LogFeedback("Connected to Lobby... ");
+
+            JoinRoom();
         }
 
         /// <summary>
