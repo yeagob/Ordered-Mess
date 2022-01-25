@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,10 +7,10 @@ using UnityEngine;
 public class Crono : MonoBehaviour
 {
     private float totalTimer = ProjectSettings.countdownRoundTime;
-    public bool timerIsRunning = false;
+    internal bool timerIsRunning = false;
     public TextMeshProUGUI cronoText;
 
-    InGameController inGameController;
+    public event Action OnCronoCompleted;
 
     void Awake()
     {
@@ -34,6 +35,12 @@ public class Crono : MonoBehaviour
                 totalTimer = 0;
                 timerIsRunning = false;
             }
+        }
+
+        if (cronoText.text == "0:00")
+        {
+            if (OnCronoCompleted != null)
+                OnCronoCompleted();
         }
     }
 
