@@ -29,6 +29,7 @@ public class HouseProps : MyMonoBehaviour
     #region UnityCalls
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
     }
     private void OnDestroy()
     {

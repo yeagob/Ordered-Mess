@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ public class ObjectsSpawner : MonoBehaviour
                 int rnd = Random.Range(0, objectList.Length);
                 currentPos += (objectList[rnd]._baseSize.y + objectOffser) * Vector3.forward;
                 biggerX = objectList[rnd]._baseSize.x > biggerX ? objectList[rnd]._baseSize.y : biggerX;
-                HouseProps prop = Instantiate(objectList[rnd], currentPos + (Vector3.right * (biggerX / 2)), objectList[rnd].transform.rotation);
+                GameObject prop = PhotonNetwork.Instantiate(objectList[rnd].name, currentPos + (Vector3.right * (biggerX / 2)), objectList[rnd].transform.rotation);
                 prop.transform.parent = this.transform;
             }
             currentPos = new Vector3(currentPos.x + biggerX + objectOffser, transform.position.y, initPos.z);
