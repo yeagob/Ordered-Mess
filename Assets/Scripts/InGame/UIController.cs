@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -40,7 +41,16 @@ public class UIController : MyMonoBehaviour
         {
             StartGame();
             //Mostrar mesnaje inicio ronda. Corutina que se desactive a los 3 seg, el mensaje
+            StartCoroutine("mostrarMnsInicial");
         }
+    }
+
+    IEnumerator mostrarMnsInicial()
+    {
+        mensajeInicioRonda.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        mensajeInicioRonda.gameObject.SetActive(false);
+
     }
 
     internal void StartGame()
