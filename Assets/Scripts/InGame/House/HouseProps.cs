@@ -12,7 +12,7 @@ public class HouseProps : MyMonoBehaviour
     [Header("Enum")]
     public List<HousePropType> _roomType;
     [Header("Point")]
-    public int _amountPoints;
+    internal int _amountPoints = 100;
     [Header("Size")]
     public Vector2 _baseSize;
 
@@ -29,6 +29,7 @@ public class HouseProps : MyMonoBehaviour
     #region UnityCalls
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
     }
     private void OnDestroy()
     {

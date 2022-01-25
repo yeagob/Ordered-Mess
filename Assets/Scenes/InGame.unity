@@ -9063,6 +9063,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1564158906729992191, guid: 5d510a9c525580a46825d9183a06bf85, type: 3}
+--- !u!114 &978548739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5841162681105800002, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
+  m_PrefabInstance: {fileID: 1937386446812205950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a574a71a8e829974eb2a19d125bf1a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &979254966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7657118221856847437, guid: bac0906030a0081489eda1bf3137a470, type: 3}
@@ -20312,6 +20323,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107836064, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 107836064, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.72
+      objectReference: {fileID: 0}
     - target: {fileID: 719678764, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_FollowOffset.y
       value: 20
@@ -20460,6 +20479,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: crono
+      value: 
+      objectReference: {fileID: 978548739}
     - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: player
       value: 

@@ -12,6 +12,7 @@ public class MyMonoBehaviour : MonoBehaviour
    internal CinemachineVirtualCamera cinemachine => gameController.cinemachine;
 
     internal NetworkManager networkManager => NetworkManager.instance;
+    internal Crono crono => gameController.crono;
 
 
 }

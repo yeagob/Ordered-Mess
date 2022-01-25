@@ -34,14 +34,11 @@ public class Crono : MonoBehaviour
                 Debug.Log("Time has run out!");
                 totalTimer = 0;
                 timerIsRunning = false;
+                if (OnCronoCompleted != null)
+                    OnCronoCompleted();
             }
         }
 
-        if (cronoText.text == "0:00")
-        {
-            if (OnCronoCompleted != null)
-                OnCronoCompleted();
-        }
     }
 
     public void StartCrono()

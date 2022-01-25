@@ -13,6 +13,8 @@ public class InGameController : MonoBehaviour
     public CharacterController player;
     public AudioManager audioManager;
     public CinemachineVirtualCamera cinemachine;
+    public Crono crono;
+
 
     [Header("Key Objects")]
     public GameObject playerPrefab;
