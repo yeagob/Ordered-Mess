@@ -9,17 +9,13 @@ namespace Mannaz.InGame
     public class MatchmakingUIController : MonoBehaviour
     {
 
-        //TODO: add cancel Button.
-
         [Tooltip("The Ui Text to inform the user about the connection progress")]
-        [SerializeField]
-        private TextMeshProUGUI feedbackText;
+        [SerializeField]TextMeshProUGUI feedbackText;
 
         [Header("Buttons")]
         [SerializeField] Button cancelRoomBtn;
 
-        [SerializeField]
-        private ScrollRect searchTextScroll;
+        [SerializeField] ScrollRect searchTextScroll;
 
 
         private void Start()

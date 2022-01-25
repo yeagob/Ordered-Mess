@@ -121,7 +121,7 @@ using System;
         void StartLocalGame()
         {
             panelMatchmajing.SetActive(false);
-            Debug.Log("RPC Start Game");
+            Debug.Log("RPC Start Game");            
             //Event
             if (OnNetworkStartGame != null)
                 OnNetworkStartGame();

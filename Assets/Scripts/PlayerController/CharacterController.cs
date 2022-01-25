@@ -50,7 +50,7 @@ public class CharacterController : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
                 this.speed = speedRun;
             else
-                this.speed = 50;
+                this.speed = ProfileControl.playerProfile.playerSpeed;
 
             float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 

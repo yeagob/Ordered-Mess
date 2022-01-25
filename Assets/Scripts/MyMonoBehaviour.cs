@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class MyMonoBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   internal InGameController gameController => InGameController.instance;
+   internal UIController uiController => gameController.uIController;
+   internal CharacterController player => gameController.player;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   internal AudioManager audioManager => gameController.audioManager;
+   
+   internal CinemachineVirtualCamera cinemachine => gameController.cinemachine;
+
+    internal NetworkManager networkManager => NetworkManager.instance;
+
+
 }

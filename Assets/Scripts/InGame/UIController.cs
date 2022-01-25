@@ -4,8 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class UIController : MyMonoBehaviour
 {
+    [Header("Panels")]
+    public GameObject inGameUI;
+    public GameObject networkUI;
 
     [Header("Texts")]
     public TextMeshProUGUI rondaText;
@@ -28,13 +31,23 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (networkManager.multiplayerOn)
+        {
+            inGameUI.SetActive(false);
+            networkUI.SetActive(true);
+        }
+        else
+        {
+            StartGame();
+            //Mostrar mesnaje inicio ronda. Corutina que se desactive a los 3 seg, el mensaje
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    internal void StartGame()
     {
-        
+        inGameUI.SetActive(true);
+        networkUI.SetActive(false);
+        mensajeInicioRonda.gameObject.SetActive(false);
     }
 
     public void SetPlayerName(string localPlayer, string otherPlayer)

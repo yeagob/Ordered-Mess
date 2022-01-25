@@ -57,6 +57,9 @@ public class InGameController : MonoBehaviour
         cinemachine.m_Follow = player.hipTransform;
         cinemachine.m_LookAt = player.hipTransform;
 
+        //UI Init
+        uIController.StartGame();
+
         if (OnStartGame != null)
             OnStartGame();
 
