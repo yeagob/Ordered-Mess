@@ -41914,6 +41914,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5267601874283364211, guid: af5f221a39ddeee408ad9dc90a7cc969, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af5f221a39ddeee408ad9dc90a7cc969, type: 3}
       propertyPath: m_Name
       value: Casa_Alexander Variant
