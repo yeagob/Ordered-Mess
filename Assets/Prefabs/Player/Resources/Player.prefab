@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPickup: {fileID: 4480247330605775303}
-  objectPicked: 0
+  grabbingObject: 0
 --- !u!114 &4480247329742416076
 MonoBehaviour:
   m_ObjectHideFlags: 0
