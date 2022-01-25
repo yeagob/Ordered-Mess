@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class UIController : MyMonoBehaviour
 {
+
+    public int objetosTotales;
+
     [Header("Panels")]
     public GameObject inGameUI;
     public GameObject networkUI;
@@ -64,5 +67,10 @@ public class UIController : MyMonoBehaviour
     {
         localPlayerNameText.text = localPlayer;
         otherPlayerNameText.text = otherPlayer;
+    }
+
+    public void SetObjsTotalesText(int numObjects)
+    {
+        objetosTotalesText.text = numObjects.ToString();
     }
 }
