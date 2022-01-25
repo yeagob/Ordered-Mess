@@ -48,7 +48,7 @@ public class UIController : MyMonoBehaviour
         }
     }
 
-    IEnumerator mostrarMnsInicial()
+    public IEnumerator mostrarMnsInicial()
     {
         mensajeInicioRonda.gameObject.SetActive(true);
         yield return new WaitForSeconds(3);

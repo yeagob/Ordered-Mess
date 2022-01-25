@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Crono : MonoBehaviour
 {
-    private float totalTimer = ProjectSettings.countdownRoundTime;
-    internal bool timerIsRunning = false;
+    public float totalTimer = ProjectSettings.countdownRoundTime;
+    public bool timerIsRunning = false;
     public TextMeshProUGUI cronoText;
 
     public event Action OnCronoCompleted;
@@ -24,7 +24,7 @@ public class Crono : MonoBehaviour
     {
         if (timerIsRunning)
         {
-            if (totalTimer > 0)
+            if (totalTimer >= 0)
             {
                 totalTimer -= Time.deltaTime;
                 DisplayTime(totalTimer);

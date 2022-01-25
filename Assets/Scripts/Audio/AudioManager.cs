@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : MyMonoBehaviour
 {
     public AudioSource[] audioSources;
 
@@ -14,6 +15,8 @@ public class AudioManager : MonoBehaviour
         CharacterController.walkStopEvent += StopWalkAudio;
         Grab.OnGrabEvent += PlayGrabAudio;
         Grab.OnThrowEvent += PlayThrowAudio;
+        InGameController.instance.OnStartGame += PlaySortingOutMusic;
+        crono.OnCronoCompleted += PlayMessingUpMusic;
     }
 
 
@@ -47,5 +50,27 @@ public class AudioManager : MonoBehaviour
     {
         if (audioSources[0].isPlaying)
             audioSources[0].Stop();
+    }
+
+    private void PlaySortingOutMusic()
+    {
+        if (!audioSources[4].isPlaying)
+        {
+            audioSources[4].Play();
+            audioSources[4].DOFade(0.8f, 1);
+        }
+
+            audioSources[3].DOFade(0, 1f);
+    }
+
+    private void PlayMessingUpMusic()
+    {
+        if (!audioSources[5].isPlaying)
+        {
+            audioSources[5].Play();
+            audioSources[5].DOFade(0.8f, 1);
+        }
+
+        audioSources[4].DOFade(0, 1f);
     }
 }
