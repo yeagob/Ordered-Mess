@@ -21,30 +21,34 @@ public class Grab : MonoBehaviour
         InGameController.instance.OnStartGame += LoadPlayerProfile;
     }
 
+
     private void Update()
     {
+        //Object released!
         if (Input.GetButtonUp("Fire1"))
         {
             if (objectPicked)
             {
-                print("Object released!");
+                //print("Object released!");
 
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.transform.parent = null;
                 pickupGO = null;
 
                 objectPicked = false;
+                pickupGO.GetComponent<HouseProps>()._objetctPicked = true;
 
                 if (OnReleaseEvent != null)
                     OnReleaseEvent(pickupGO.GetComponent<HouseProps>());
             }
         }
 
+        //Object throwed!
         if (Input.GetButtonDown("Fire2"))
         {
             if (objectPicked)
             {
-                print("Object throwed!");
+                //print("Object throwed!");
 
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.transform.parent = null;
@@ -54,19 +58,24 @@ public class Grab : MonoBehaviour
                 //Delay to not pick up again the object while pressing Fire1 and throwing
                 Invoke(nameof(DelayObjectPicked), 0.2f);
 
-                if(OnThrowEvent != null)
+                //
+                pickupGO.GetComponent<HouseProps>()._objetctPicked = false;
+
+                if (OnThrowEvent != null)
                     OnThrowEvent(pickupGO.GetComponent<HouseProps>());
             }
         }
     }
 
+    //TODO: refactor.
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Pickable")
         {
-            if (Input.GetButton("Fire1") && !objectPicked)
+            //Object grabbed!
+            if (Input.GetButton("Fire1") && !objectPicked && !other.gameObject.GetComponent<HouseProps>()._objetctPicked)
             {
-                print("Object grabbed!");
+              //  print("Object grabbed!");
 
                 pickupGO = other.gameObject;
                 other.GetComponent<Rigidbody>().isKinematic = true;
@@ -74,6 +83,8 @@ public class Grab : MonoBehaviour
                 other.transform.parent = targetPickup;
 
                 objectPicked = true;
+
+                pickupGO.GetComponent<HouseProps>()._objetctPicked = true;
 
                 if (OnGrabEvent != null)
                     OnGrabEvent(other.GetComponent<HouseProps>());
@@ -88,7 +99,7 @@ public class Grab : MonoBehaviour
 
     private void LoadPlayerProfile()
     {
-        throwForce = PlayerProfile.instance.throwObjectsForce;
+        throwForce = ProfileControl.playerProfile.throwObjectsForce;
     }
 
 }

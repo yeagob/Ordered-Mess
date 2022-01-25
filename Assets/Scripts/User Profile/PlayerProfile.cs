@@ -1,7 +1,6 @@
 ﻿    [System.Serializable]
     public class PlayerProfile 
     {
-        public static PlayerProfile instance;
 
         public string playerName = "";
         public int rank = 0;

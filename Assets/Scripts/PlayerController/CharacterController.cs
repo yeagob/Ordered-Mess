@@ -83,7 +83,7 @@ public class CharacterController : MonoBehaviour
 
     private void LoadPlayerProfile()
     {
-        speed = PlayerProfile.instance.playerSpeed;
-        speedRun = PlayerProfile.instance.playerSpeedRun;
+        speed = ProfileControl.playerProfile.playerSpeed;
+        speedRun = ProfileControl.playerProfile.playerSpeedRun;
     }
 }

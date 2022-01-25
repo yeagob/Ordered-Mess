@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class ObjectsSpawner : MonoBehaviour
 {
     [SerializeField] HouseProps[] objectList;
-    [SerializeField] Vector3 sizeXY;
+    [SerializeField] Vector3 size;
     
     // Start is called before the first frame update
     void Awake()
@@ -17,18 +17,24 @@ public class ObjectsSpawner : MonoBehaviour
 
     private void SpawnObjects()
     {
-        for (int x = 0; x < 3; x++)
+        Vector3 initPos = transform.position - ((size.x * Vector3.right) / 2) - ((size.z * Vector3.forward) / 2);
+        Vector3 currentPos = initPos;
+        float biggerX = 0;
+        for (int x = 0; currentPos.x < initPos.x + size.x; x++)
         {
-            for (int y = 0; y < 5; y++)
+            for (int z = 0; currentPos.z < initPos.z + size.z + size.x; z++)
             {
                 int rnd = Random.Range(0, objectList.Length);
-                Instantiate(objectList[rnd], transform.position + (x * Vector3.right) + (y * Vector3.forward), objectList[rnd].transform.rotation);
+                currentPos += objectList[rnd]._baseSize.y * Vector3.forward;
+                biggerX = objectList[rnd]._baseSize.x > biggerX ? objectList[rnd]._baseSize.y : biggerX;
+                Instantiate(objectList[rnd], currentPos + (Vector3.right * (biggerX / 2)), objectList[rnd].transform.rotation);
             }
+            currentPos = new Vector3(currentPos.x + biggerX, transform.position.y, initPos.z);
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawCube(transform.position, sizeXY);
+        Gizmos.DrawCube(transform.position, size);
     }
 }
