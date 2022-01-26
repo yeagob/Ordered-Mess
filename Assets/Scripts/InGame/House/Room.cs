@@ -21,9 +21,10 @@ public class Room : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pickable"))
+        if (other.CompareTag("Pickable") && !other.GetComponent<HouseProps>()._realiseObject)
         {
-            roomHouseProps.Add(other.gameObject);
+           roomHouseProps.Remove(other.gameObject);
+           other.GetComponent<HouseProps>()._realiseObject = true;
         }
 
         if (other.CompareTag("Player"))
@@ -35,9 +36,10 @@ public class Room : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Pickable"))
+        if (other.CompareTag("Pickable") && !other.GetComponent<HouseProps>()._objetctPicked)
         {
-            roomHouseProps.Remove(other.gameObject);
+            roomHouseProps.Add(other.gameObject);
+            other.GetComponent<HouseProps>()._realiseObject = false;
         }
     }
         #endregion
