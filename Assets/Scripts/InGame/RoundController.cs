@@ -23,10 +23,12 @@ public class RoundController : MyMonoBehaviour
             StartCoroutine(uiController.mostrarMnsInicial());
 
             //Message
-            if(PhotonNetwork.IsMasterClient)
-                uiController.mensajeInicioRonda.text = "Now make a mess!" + InGameController.instance.pointFirstRoundPlayer1;
+            uiController.mensajeInicioRonda.text = "Now make a mess!";
+            StartCoroutine(uiController.ShowTotalRoundPointsText());
+            if (PhotonNetwork.IsMasterClient)
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer1 + " points";
             else
-                uiController.mensajeInicioRonda.text = "Now make a mess!" + InGameController.instance.pointFirstRoundPlayer2;
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer2 + " points";
 
             uiController.rondaText.text = "Round: 2/2";
             crono.totalTimer = ProjectSettings.countdownRoundTime;
@@ -37,6 +39,14 @@ public class RoundController : MyMonoBehaviour
         {
             StartCoroutine(uiController.mostrarMnsInicial());
             uiController.mensajeInicioRonda.text = "Game Over";
+
+            StartCoroutine(uiController.ShowTotalRoundPointsText());
+            if (PhotonNetwork.IsMasterClient)
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointSecondRoundPlayer1 + " points";
+            else
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointSecondRoundPlayer2 + " points";
+
+            uiController.ShowGameOverPanel();
 
             if (OnGameCompleted != null)
                 OnGameCompleted();
