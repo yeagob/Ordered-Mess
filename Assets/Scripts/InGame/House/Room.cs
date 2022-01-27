@@ -9,10 +9,7 @@ public class Room : MyMonoBehaviour
     #region Attributes
     [Header("Enum")]
     public HousePropType _roomType;
-
     public List<GameObject> roomHouseProps = new List<GameObject>();
-    
-
     #endregion
 
     #region UnityCalls
@@ -30,7 +27,7 @@ public class Room : MyMonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            print(_roomType);
+           // print(_roomType);
         }
 
     }
@@ -41,13 +38,10 @@ public class Room : MyMonoBehaviour
         {
             roomHouseProps.Add(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = false;
-            int auxObjetosActuales = uiController.objetosTotales;
-            auxObjetosActuales--;
-            uiController.SetObjsTotalesText(auxObjetosActuales);
         }
     }
-        #endregion
+    #endregion
 
-        #region Methods
+    #region Methods
         #endregion
     }

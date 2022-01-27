@@ -14,6 +14,10 @@ public class InGameController : MonoBehaviour
     public AudioManager audioManager;
     public CinemachineVirtualCamera cinemachine;
     public Crono crono;
+    private int pointFirstRoundPlayer1;
+    private int pointFirstRoundPlayer2;
+    
+
 
 
     [Header("Key Objects")]
@@ -29,6 +33,8 @@ public class InGameController : MonoBehaviour
     [SerializeField] private List<Room> roomsPlayer1 = new List<Room>();
     [SerializeField] private List<Room> roomsPlayer2 = new List<Room>();
 
+    //Main tools
+    [SerializeField] public RoundController roundController;
     // Start is called before the first frame update
     void Awake()
     {
@@ -82,7 +88,8 @@ public class InGameController : MonoBehaviour
         {
             foreach (GameObject prop in room.roomHouseProps) 
             {
-                calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
+                  calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
+                  pointFirstRoundPlayer1 = calculatePointPlayer1;
             }
         }        
             print("Player_1 total points" + calculatePointPlayer1);
@@ -90,9 +97,17 @@ public class InGameController : MonoBehaviour
         {
             foreach (GameObject prop in room.roomHouseProps) 
             { 
-                calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
+                  calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
+                  pointFirstRoundPlayer2 = calculatePointPlayer2;
             }
         }
+
             print("Player_2 total points" + calculatePointPlayer2);
+        if (roundController.sortingOut && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
+        {
+           
+            calculatePointPlayer1 = pointFirstRoundPlayer1 - calculatePointPlayer1;
+            calculatePointPlayer2 = pointFirstRoundPlayer2 - calculatePointPlayer2;
+        }
     }
 }
