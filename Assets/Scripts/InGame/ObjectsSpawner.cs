@@ -10,7 +10,7 @@ public class ObjectsSpawner : MyMonoBehaviour
     [SerializeField] HouseProps[] objectList;
     [SerializeField] Vector3 size;
     [SerializeField] float objectOffser = 0.1f;
-    internal int numObjectsSpawner;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,12 +42,11 @@ public class ObjectsSpawner : MyMonoBehaviour
                     prop.transform.parent = this.transform;
 
                 //TODO: RPC al otro jugador de la cantidad de muebles.
-                numObjectsSpawner++;
+
             }
 
             currentPos = new Vector3(currentPos.x + biggerX + objectOffser, transform.position.y, initPos.z);
         }
-        uiController.SetObjsTotalesText(numObjectsSpawner);
     }
 
     private void OnDrawGizmos()

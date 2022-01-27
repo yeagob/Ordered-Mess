@@ -14,5 +14,5 @@ public enum HousePropType
     Kitchen,
     Dining_room,
     Guest_bedroom,
-
+    Center,
 }
