@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb7fd21619def7945883310e442de519, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -758.3408
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb7fd21619def7945883310e442de519, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb7fd21619def7945883310e442de519, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1073.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb7fd21619def7945883310e442de519, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fb7fd21619def7945883310e442de519, type: 3}
       propertyPath: m_Name
-      value: CasaSimple
+      value: CasaSimple Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fb7fd21619def7945883310e442de519, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb7fd21619def7945883310e442de519, type: 3}
