@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,7 +21,13 @@ public class RoundController : MyMonoBehaviour
         if (sortingOut)
         {
             StartCoroutine(uiController.mostrarMnsInicial());
-            uiController.mensajeInicioRonda.text = "Now make a mess!";
+
+            //Message
+            if(PhotonNetwork.IsMasterClient)
+                uiController.mensajeInicioRonda.text = "Now make a mess!" + InGameController.instance.pointFirstRoundPlayer1;
+            else
+                uiController.mensajeInicioRonda.text = "Now make a mess!" + InGameController.instance.pointFirstRoundPlayer2;
+
             uiController.rondaText.text = "Round: 2/2";
             crono.totalTimer = ProjectSettings.countdownRoundTime;
             crono.timerIsRunning = true;

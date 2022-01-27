@@ -1095,7 +1095,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 337121315506764146, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.20007324
+      value: -0.20019531
       objectReference: {fileID: 0}
     - target: {fileID: 1254310076975510404, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1269,6 +1269,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5800153142087904952, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.099853516
+      objectReference: {fileID: 0}
     - target: {fileID: 7595799535543131520, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.44525146
@@ -1276,6 +1280,10 @@ PrefabInstance:
     - target: {fileID: 8036301408964019904, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740865142353051344, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.69999695
       objectReference: {fileID: 0}
     - target: {fileID: 9059545823427298538, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1629,6 +1637,10 @@ PrefabInstance:
       propertyPath: uIController
       value: 
       objectReference: {fileID: 1937386446812205951}
+    - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: roundController
+      value: 
+      objectReference: {fileID: 160583511}
     - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: roomsPlayer1.Array.size
       value: 6

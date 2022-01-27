@@ -14,8 +14,8 @@ public class InGameController : MonoBehaviour
     public AudioManager audioManager;
     public CinemachineVirtualCamera cinemachine;
     public Crono crono;
-    private int pointFirstRoundPlayer1;
-    private int pointFirstRoundPlayer2;
+    internal int pointFirstRoundPlayer1;
+    internal int pointFirstRoundPlayer2;
     
 
 
