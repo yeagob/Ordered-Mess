@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameObject: Table
-  _roomType: 
-  _amountPoints: 0
+  _roomType: 0200000004000000030000000500000006000000
   _baseSize: {x: 2, y: 1.5}
+  _objetctPicked: 0
   _floorObject: 1
   _wallObject: 0
 --- !u!114 &-502033116063072722

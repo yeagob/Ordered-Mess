@@ -71,6 +71,7 @@ public class UIController : MyMonoBehaviour
 
     public void SetObjsTotalesText(int numObjects)
     {
-        objetosTotalesText.text = numObjects.ToString();
+        objetosTotales = numObjects;
+        objetosTotalesText.text = objetosTotales.ToString();
     }
 }

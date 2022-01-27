@@ -25,6 +25,10 @@ public class InGameController : MonoBehaviour
 
     public event Action OnStartGame;
 
+    [Header("List")]
+    [SerializeField] private List<Room> roomsPlayer1 = new List<Room>();
+    [SerializeField] private List<Room> roomsPlayer2 = new List<Room>();
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,6 +43,9 @@ public class InGameController : MonoBehaviour
         }
         else
             StartGame();
+
+        //events
+        crono.OnCronoCompleted += LoadPointsPlayers;
     }
 
     internal void StartGame()
@@ -65,5 +72,27 @@ public class InGameController : MonoBehaviour
         if (OnStartGame != null)
             OnStartGame();
 
+    }
+
+    public void LoadPointsPlayers()
+    {
+        int calculatePointPlayer1 = 0;
+        int calculatePointPlayer2 = 0;
+        foreach(Room room in roomsPlayer1)
+        {
+            foreach (GameObject prop in room.roomHouseProps) 
+            {
+                calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
+            }
+        }        
+            print("Player_1 total points" + calculatePointPlayer1);
+        foreach(Room room in roomsPlayer2)
+        {
+            foreach (GameObject prop in room.roomHouseProps) 
+            { 
+                calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
+            }
+        }
+            print("Player_2 total points" + calculatePointPlayer2);
     }
 }

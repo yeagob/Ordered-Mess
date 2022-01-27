@@ -21,6 +21,7 @@ public class RoundController : MyMonoBehaviour
         {
             StartCoroutine(uiController.mostrarMnsInicial());
             uiController.mensajeInicioRonda.text = "Now make a mess!";
+            uiController.rondaText.text = "Round: 2/2";
             crono.totalTimer = ProjectSettings.countdownRoundTime;
             crono.timerIsRunning = true;
             sortingOut = !sortingOut;

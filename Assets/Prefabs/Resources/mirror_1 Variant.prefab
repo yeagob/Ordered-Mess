@@ -160,9 +160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameObject: Mirror_01
-  _roomType: 
-  _amountPoints: 0
+  _roomType: 02000000030000000400000005000000060000000000000001000000
   _baseSize: {x: 0.5, y: 0.5}
+  _objetctPicked: 0
   _floorObject: 0
   _wallObject: 1
 --- !u!114 &-3526084055622541546

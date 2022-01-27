@@ -20,6 +20,7 @@ public class HouseProps : MyMonoBehaviour
     public  bool _objetctPicked;
     public bool _floorObject;
     public bool _wallObject;
+    [HideInInspector] public bool _realiseObject;
 
     // Singlentons
     [System.NonSerialized]
@@ -31,6 +32,8 @@ public class HouseProps : MyMonoBehaviour
     {
         photonView = GetComponent<PhotonView>();
     }
+
+    
     private void OnDestroy()
     {
     }
