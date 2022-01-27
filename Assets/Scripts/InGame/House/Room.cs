@@ -44,6 +44,8 @@ public class Room : MyMonoBehaviour
         {
             roomHouseProps.Add(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = false;
+            other.GetComponent<HouseProps>()._propType = _roomType;
+            other.GetComponent<HouseProps>()._countRomeType = 0;
 
             if (_roomType == HousePropType.Center)
             {

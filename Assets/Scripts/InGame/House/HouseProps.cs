@@ -11,8 +11,10 @@ public class HouseProps : MyMonoBehaviour
     public string _nameObject;
     [Header("Enum")]
     public List<HousePropType> _roomType;
+    public HousePropType _propType;
+    public HousePropType _saveRomeType;
     [Header("Point")]
-    internal int _amountPoints = 100;
+    public /*internal*/ int _amountPoints = 0;
     [Header("Size")]
     public Vector2 _baseSize;
 
@@ -22,6 +24,8 @@ public class HouseProps : MyMonoBehaviour
     public bool _wallObject;
     [HideInInspector] public bool _realiseObject;
 
+  //int 
+  internal int _countRomeType = 0;
     // Singlentons
     [System.NonSerialized]
     public PhotonView photonView;
@@ -29,11 +33,15 @@ public class HouseProps : MyMonoBehaviour
           
     #region UnityCalls
     void Start()
-    {
+    {   
+        _amountPoints = 0;
         photonView = GetComponent<PhotonView>();
     }
 
-    
+    private void Update()
+    {
+        PointsProp();
+    }
     private void OnDestroy()
     {
     }
@@ -56,10 +64,26 @@ public class HouseProps : MyMonoBehaviour
 
     private void PointsProp()
     {
-        //if (this.transform.rotation.y < transform.eulerAngles.y)
-        //{
-        //    _amountPoints
-        //}
+
+        if (_countRomeType < _roomType.Count && _roomType[_countRomeType] != _propType )
+        {
+          _countRomeType++;
+        }
+        else
+        {
+            if (_propType != HousePropType.none && _countRomeType != _roomType.Count)
+            {
+                _saveRomeType = _roomType[_countRomeType];
+            }
+            if (_propType != HousePropType.none && _saveRomeType == _propType)
+            {
+                _amountPoints = 100;
+            }
+            else
+            {
+                _amountPoints = 0;
+            }
+        }
     }
     #endregion
 

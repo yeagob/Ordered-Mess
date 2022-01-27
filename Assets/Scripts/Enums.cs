@@ -7,6 +7,7 @@ public enum Scenes
 }
 public enum HousePropType
 {
+    none,
     Hallway,
     Bathroom,
     Living_room,
