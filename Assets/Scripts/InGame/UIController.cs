@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIController : MyMonoBehaviour
 {
@@ -13,6 +14,9 @@ public class UIController : MyMonoBehaviour
     [Header("Panels")]
     public GameObject inGameUI;
     public GameObject networkUI;
+    public GameObject gameOverPanel;
+    public GameObject superiorPanel;
+    public GameObject playersPanel;
 
     [Header("Texts")]
     public TextMeshProUGUI rondaText;
@@ -23,6 +27,7 @@ public class UIController : MyMonoBehaviour
     public TextMeshProUGUI localPlayerObjectsText;
     public TextMeshProUGUI otherPlayerObjectsText;
     public TextMeshProUGUI objetosTotalesText;
+    public TextMeshProUGUI totalRoundPointsText;
 
     [Header("Buttons")]
     public Button exitButton;
@@ -73,5 +78,20 @@ public class UIController : MyMonoBehaviour
     {
         objetosTotales = numObjects;
         objetosTotalesText.text = objetosTotales.ToString();
+    }
+
+    public IEnumerator ShowTotalRoundPointsText()
+    {
+        totalRoundPointsText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        totalRoundPointsText.gameObject.SetActive(false);
+    }
+
+    public void ShowGameOverPanel()
+    {
+        gameOverPanel.SetActive(true);
+        gameOverPanel.GetComponent<CanvasGroup>().DOFade(1, 5);
+        superiorPanel.GetComponent<CanvasGroup>().DOFade(0, 1);
+        playersPanel.GetComponent<CanvasGroup>().DOFade(0, 1);
     }
 }

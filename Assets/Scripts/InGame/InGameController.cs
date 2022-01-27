@@ -16,7 +16,10 @@ public class InGameController : MonoBehaviour
     public Crono crono;
     internal int pointFirstRoundPlayer1;
     internal int pointFirstRoundPlayer2;
-    
+
+    internal int pointSecondRoundPlayer1;
+    internal int pointSecondRoundPlayer2;
+
 
 
 
@@ -108,6 +111,13 @@ public class InGameController : MonoBehaviour
            
             calculatePointPlayer1 = pointFirstRoundPlayer1 - calculatePointPlayer1;
             calculatePointPlayer2 = pointFirstRoundPlayer2 - calculatePointPlayer2;
+        }
+
+        if (!roundController.sortingOut && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
+        {
+
+            pointSecondRoundPlayer1 = pointFirstRoundPlayer1 - calculatePointPlayer1;
+            pointSecondRoundPlayer2 = pointFirstRoundPlayer2 - calculatePointPlayer2;
         }
     }
 }
