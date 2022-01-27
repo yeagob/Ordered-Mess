@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class UIController : MyMonoBehaviour
 {
@@ -28,6 +29,7 @@ public class UIController : MyMonoBehaviour
     public TextMeshProUGUI otherPlayerObjectsText;
     public TextMeshProUGUI objetosTotalesText;
     public TextMeshProUGUI totalRoundPointsText;
+    public TextMeshProUGUI playerWonText;
 
     [Header("Buttons")]
     public Button exitButton;
@@ -87,11 +89,26 @@ public class UIController : MyMonoBehaviour
         totalRoundPointsText.gameObject.SetActive(false);
     }
 
-    public void ShowGameOverPanel()
+    public IEnumerator ShowGameOverPanel()
     {
         gameOverPanel.SetActive(true);
         gameOverPanel.GetComponent<CanvasGroup>().DOFade(1, 5);
         superiorPanel.GetComponent<CanvasGroup>().DOFade(0, 1);
         playersPanel.GetComponent<CanvasGroup>().DOFade(0, 1);
+
+        totalRoundPointsText.transform.parent = transform;
+        mensajeInicioRonda.transform.parent = transform;
+
+        //TODO: playerWonText.text = "";
+
+        yield return new WaitForSeconds(3);
+
+        playerWonText.gameObject.SetActive(true);
+        mensajeInicioRonda.gameObject.SetActive(true);
+        totalRoundPointsText.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2);
+        //Back to main menu
+        SceneManager.LoadScene(0);
     }
 }

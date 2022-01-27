@@ -46,7 +46,7 @@ public class RoundController : MyMonoBehaviour
             else
                 uiController.totalRoundPointsText.text = "" + InGameController.instance.pointSecondRoundPlayer2 + " points";
 
-            uiController.ShowGameOverPanel();
+            StartCoroutine(uiController.ShowGameOverPanel());
 
             if (OnGameCompleted != null)
                 OnGameCompleted();
