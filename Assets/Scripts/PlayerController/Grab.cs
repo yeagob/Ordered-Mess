@@ -34,12 +34,13 @@ public class Grab : MonoBehaviour
                 pickupGO.GetComponent<HouseProps>().Release();
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.transform.parent = null;
-                pickupGO = null;
 
                 grabbingObject = false;
 
                 if (OnReleaseEvent != null)
                     OnReleaseEvent(pickupGO.GetComponent<HouseProps>());
+
+                pickupGO = null;
             }
         }
 
@@ -53,14 +54,15 @@ public class Grab : MonoBehaviour
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.GetComponent<HouseProps>().Release();
                 pickupGO.transform.parent = null;
-                pickupGO.GetComponent<Rigidbody>().AddForce(-Vector3.forward* throwForce, ForceMode.Impulse);
-                pickupGO = null;
+                pickupGO.GetComponent<Rigidbody>().AddForce(-transform.forward* throwForce, ForceMode.Impulse);
 
                 //Delay to not pick up again the object while pressing Fire1 and throwing
                 Invoke(nameof(DelayObjectPicked), 0.2f);
 
                 if (OnThrowEvent != null)
                     OnThrowEvent(pickupGO.GetComponent<HouseProps>());
+
+                pickupGO = null;
             }
         }
     }
