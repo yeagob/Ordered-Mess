@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room : MonoBehaviour
+public class Room : MyMonoBehaviour
 {
     
     #region Attributes
@@ -12,8 +12,9 @@ public class Room : MonoBehaviour
 
     public List<GameObject> roomHouseProps = new List<GameObject>();
     
+
     #endregion
-          
+
     #region UnityCalls
     void Start()
     {
@@ -23,8 +24,8 @@ public class Room : MonoBehaviour
     {
         if (other.CompareTag("Pickable") && !other.GetComponent<HouseProps>()._realiseObject)
         {
-           roomHouseProps.Remove(other.gameObject);
-           other.GetComponent<HouseProps>()._realiseObject = true;
+            roomHouseProps.Remove(other.gameObject);
+            other.GetComponent<HouseProps>()._realiseObject = true;
         }
 
         if (other.CompareTag("Player"))
@@ -40,6 +41,9 @@ public class Room : MonoBehaviour
         {
             roomHouseProps.Add(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = false;
+            int auxObjetosActuales = uiController.objetosTotales;
+            auxObjetosActuales--;
+            uiController.SetObjsTotalesText(auxObjetosActuales);
         }
     }
         #endregion
