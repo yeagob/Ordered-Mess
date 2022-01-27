@@ -54,7 +54,13 @@ public class HouseProps : MyMonoBehaviour
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
     }
 
-   
+    private void PointsProp()
+    {
+        //if (this.transform.rotation.y < transform.eulerAngles.y)
+        //{
+        //    _amountPoints
+        //}
+    }
     #endregion
 
     #region RPCs
