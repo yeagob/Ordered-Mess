@@ -23,6 +23,12 @@ public class Room : MyMonoBehaviour
         {
             roomHouseProps.Remove(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = true;
+            if (_roomType == HousePropType.Center)
+            {
+                int auxObjetosActuales = uiController.objetosTotales;
+                auxObjetosActuales++;
+                uiController.SetObjsTotalesText(auxObjetosActuales);
+            }
         }
 
         if (other.CompareTag("Player"))
@@ -38,6 +44,13 @@ public class Room : MyMonoBehaviour
         {
             roomHouseProps.Add(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = false;
+
+            if (_roomType == HousePropType.Center)
+            {
+                int auxObjetosActuales = uiController.objetosTotales;
+                auxObjetosActuales--;
+                uiController.SetObjsTotalesText(auxObjetosActuales);
+            }
         }
     }
     #endregion
