@@ -12,8 +12,7 @@ public class Room : MyMonoBehaviour
     public HousePropType _roomType;
     public List<GameObject> roomHouseProps = new List<GameObject>();
     
-    [Header("pref")]
-    public GameObject _pointUiPrefab;
+
     //event
     public static event Action OnTriggerEnterProp;
     public static event Action OnTriggerExitProp;
@@ -65,7 +64,7 @@ public class Room : MyMonoBehaviour
                 uiController.SetObjsTotalesText(auxObjetosActuales);
             }
 
-            SpawnUiPoints(other.gameObject);
+            
             if (OnTriggerExitProp != null)
             {
               OnTriggerExitProp();
@@ -75,11 +74,6 @@ public class Room : MyMonoBehaviour
     #endregion
 
     #region Methods
-    private void SpawnUiPoints(GameObject _gameObjectPosition)
-    {
-          GameObject pointUiObject = Instantiate(_pointUiPrefab, _gameObjectPosition.transform.position, Quaternion.identity) as GameObject;
-          pointUiObject.GetComponentInChildren<Text>().text = GetComponent<HouseProps>()._amountPoints.ToString();
-          pointUiObject.GetComponent<Animator>().Play("CanvasPanelPointAnim");
-    }
+   
     #endregion
     }

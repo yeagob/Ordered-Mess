@@ -5450,6 +5450,11 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!4 &1688849987327061681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2980548596692438795, guid: 2a8dedd11b00409468e3117b39a73d74, type: 3}
+  m_PrefabInstance: {fileID: 4480247330228478394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2224080601466244068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6849820344177218978, guid: 2a8dedd11b00409468e3117b39a73d74, type: 3}
@@ -6960,7 +6965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e644607acf12fd4d882cbcb19c5533b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPickup: {fileID: 4480247330605775303}
+  targetPickup: {fileID: 1688849987327061681}
   grabbingObject: 0
 --- !u!114 &4480247329742416076
 MonoBehaviour:

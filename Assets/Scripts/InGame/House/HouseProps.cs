@@ -4,21 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class HouseProps : MyMonoBehaviour
 {
-        
+
     #region Attributes
+    [Header("Puntos")]
+    public GameObject _pointUiPrefab;
+
     [Header("Name")]
     [HideInInspector]public string _nameObject;
     [Header("Enum")]
     public List<HousePropType> _roomType;
     [HideInInspector]public HousePropType _propType;
     [HideInInspector]private HousePropType _saveRomeType;
-    [Header("Point")]
-    public int _amountPoints = 0;
+    [Header("Points")]
+    public int _maxAmountPoints = 1000;
+    internal int _amountPoints = 0;
     [Header("Size")]
     public Vector2 _baseSize;
+
+    //Instantiated Points
+    GameObject instantiatedPoints = null;
 
     [Header("Bools")]
     public  bool  _objetctPicked;
@@ -30,18 +38,19 @@ public class HouseProps : MyMonoBehaviour
     //int 
     internal int _countRomeType = 0;
       
-    //camare
-    [SerializeField]private GameObject _cameraMain;
     // Singlentons
     [System.NonSerialized]
     public PhotonView photonView;
+
+    //Event
+    public event Action<int> OnPointsRefresh;//<-Particle System
+    public static event Action OnAnyPointsRefresh;//<-Sount
     #endregion
-          
+
     #region UnityCalls
     void Start()
     {   
         _amountPoints = 0;
-        _cameraMain = FindObjectOfType<Camera>().gameObject;
         photonView = GetComponent<PhotonView>();
         //events
         Room.OnTriggerExitProp += CheckPropsRoom;
@@ -49,7 +58,6 @@ public class HouseProps : MyMonoBehaviour
 
     void Update()
     {
-        PointsProp();
     }
     private void OnDestroy()
     {
@@ -61,45 +69,66 @@ public class HouseProps : MyMonoBehaviour
     internal void Grab()
     {
         _objetctPicked = true;
+        gameObject.layer = LayerMask.NameToLayer("Grabbed");
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
     }
     internal void Release()
     {
         _objetctPicked = false;
+        gameObject.layer = LayerMask.NameToLayer("Default");
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
+
+        //Actualizamos los puntos
+        UpdatePoints();
     }
 
-    private void PointsProp()
+    private void UpdatePoints()
     {
         if (_endCorrutineCheckPropRoom && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
         {
 
-            if (this.transform.rotation.x == _cameraMain.transform.rotation.x)
-            {
-                _amountPoints = 100;
-            }            
-            if (this.transform.rotation.x  < _cameraMain.transform.rotation.x)
-            {
-                _amountPoints = 100 / 2;
-            }            
-            if ( this.transform.rotation.x > _cameraMain.transform.rotation.x)
-            {
-                _amountPoints = 100 / 4;
-            }
+            if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
+                _amountPoints = _maxAmountPoints;
+            
+            if (Vector3.Angle(this.transform.forward, Vector3.up) > 45 && Vector3.Angle(this.transform.forward, Vector3.up) < 135)
+                _amountPoints = _maxAmountPoints / 4;
+            
+            if (Vector3.Angle(this.transform.forward, Vector3.up) > 135)
+                _amountPoints = _maxAmountPoints / 8;
         }
         else
         {
             _amountPoints = 0;
         }
-    }   
-     void CheckPropsRoom()
+
+        //EVENTs
+        if (OnPointsRefresh != null)
+            OnPointsRefresh(_amountPoints);
+        if (OnAnyPointsRefresh != null)
+            OnAnyPointsRefresh();
+
+
+        SpawnUiPoints();
+    }
+
+    internal void SpawnUiPoints()
+    {
+        if (instantiatedPoints == null)
+            instantiatedPoints = Instantiate(_pointUiPrefab, transform.position, Quaternion.identity);
+
+        instantiatedPoints.transform.position = transform.position + Vector3.up;
+        instantiatedPoints.transform.forward = Camera.main.transform.forward;
+        instantiatedPoints.GetComponentInChildren<Text>().text = _amountPoints.ToString();
+        instantiatedPoints.GetComponent<Animator>().Play("CanvasPanelPointAnim");
+    }
+
+    void CheckPropsRoom()
     {
         _endCorrutineCheckPropRoom = false;
         _countRomeType = 0;
         StartCoroutine(CorrutineCheckPropRoom());
-        
     }
 
     

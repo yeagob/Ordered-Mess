@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
   _nameObject: Lamp_01
   _roomType: 020000000300000004000000050000000600000000000000
   _propType: 0
@@ -221,4 +222,3 @@ MonoBehaviour:
   _wallObject: 0
   _realiseObject: 0
   _cameraMain: {fileID: 0}
-  _canvasPointPref: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
