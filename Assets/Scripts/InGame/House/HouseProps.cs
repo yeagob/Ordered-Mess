@@ -58,15 +58,16 @@ public class HouseProps : MyMonoBehaviour
 
     void Update()
     {
+        print(Input.GetAxis("Mouse ScrollWheel"));
         if (_objetctPicked)
         {
             //Nos aseguramos que siempre esté en el centro de la mano el objeto
             transform.localPosition = Vector3.zero;
 
             //Si el objeto está cogido y le das a la rueda del ratón, lo giras
-            if (Input.GetAxis("Mouse ScrollWheel") == 1)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0.1)
                 transform.Rotate(45, 0, 0);
-            if (Input.GetAxis("Mouse ScrollWheel") == -1)
+            if (Input.GetAxis("Mouse ScrollWheel") < -0.1)
                 transform.Rotate(-45, 0, 0);
         }
     }
