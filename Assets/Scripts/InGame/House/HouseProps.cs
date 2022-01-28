@@ -118,7 +118,7 @@ public class HouseProps : MyMonoBehaviour
         if (instantiatedPoints == null)
             instantiatedPoints = Instantiate(_pointUiPrefab, transform.position, Quaternion.identity);
 
-        instantiatedPoints.transform.position = transform.position + Vector3.up;
+        instantiatedPoints.transform.position = transform.position + Vector3.up * 5 - Vector3.forward;
         instantiatedPoints.transform.forward = Camera.main.transform.forward;
         instantiatedPoints.GetComponentInChildren<Text>().text = _amountPoints.ToString();
         instantiatedPoints.GetComponent<Animator>().Play("CanvasPanelPointAnim");
