@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private float speedRun = 100f;
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Rigidbody hip;
+    [SerializeField] private ParticleSystem dustParticle;
 
     [SerializeField] private Animator targetAnimator;
 
@@ -63,12 +64,17 @@ public class CharacterController : MonoBehaviour
             if (walkEvent != null)
                 walkEvent();
 
+            if(!dustParticle.isPlaying)
+                dustParticle.Play();
 
         }  else {
             this.walk = false;
 
             if (walkStopEvent != null)
                 walkStopEvent();
+
+            if (dustParticle.isPlaying)
+                dustParticle.Stop();
         }
 
         this.targetAnimator.SetBool("Walk", this.walk);
