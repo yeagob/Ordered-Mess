@@ -7,13 +7,21 @@ using UnityEngine;
 public class RoundController : MyMonoBehaviour
 {
     public bool sortingOut;
-    public event Action OnGameCompleted;
+    public static event Action OnGameCompleted;
+    public static event Action On10SeconsLeft;
 
     // Start is called before the first frame update
     void Start()
     {
         crono.OnCronoCompleted += CronoCompleted;
         uiController.mensajeInicioRonda.text = "Now sort out the house!";
+    }
+
+    private void Update()
+    {
+        if (crono.totalTimer <= 10)
+            if (On10SeconsLeft != null)
+                On10SeconsLeft();
     }
 
     private void CronoCompleted()

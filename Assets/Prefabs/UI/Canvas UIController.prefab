@@ -84,7 +84,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1859690847418778852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -94,15 +94,15 @@ RectTransform:
   m_GameObject: {fileID: 61874774706024875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.90909094, y: 0.90909094, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6234820250938776749}
-  m_RootOrder: 0
+  m_Father: {fileID: 3306381989897070996}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000038146973, y: 44.8}
+  m_AnchoredPosition: {x: -0, y: 89.81}
   m_SizeDelta: {x: 305.27393, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6837207259519284249
@@ -504,8 +504,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1859690847418778852}
+  m_Children: []
   m_Father: {fileID: 3306381989897070996}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -599,8 +598,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.71750003, y: 0.20056252}
   m_AnchorMax: {x: 1, y: 0.795}
-  m_AnchoredPosition: {x: -34, y: 0}
-  m_SizeDelta: {x: -111.51999, y: 0}
+  m_AnchoredPosition: {x: -34, y: 12.849997}
+  m_SizeDelta: {x: -111.51999, y: 25.700008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &557304046537528033
 CanvasRenderer:
@@ -735,8 +734,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.70375, y: 0.20625398}
   m_AnchorMax: {x: 0.95500004, y: 0.7937461}
-  m_AnchoredPosition: {x: 0.4000244, y: 0}
-  m_SizeDelta: {x: -1, y: 0}
+  m_AnchoredPosition: {x: 14.450012, y: 7.3500004}
+  m_SizeDelta: {x: -29.099976, y: 14.699999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5059106351388191803
 CanvasRenderer:
@@ -885,6 +884,7 @@ RectTransform:
   - {fileID: 4290919991478444609}
   - {fileID: 5800153142087904952}
   - {fileID: 9059545823427298538}
+  - {fileID: 1859690847418778852}
   m_Father: {fileID: 2152541445462230440}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1871,7 +1871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.058750004, y: 0.20625398}
   m_AnchorMax: {x: 0.34, y: 0.7937461}
-  m_AnchoredPosition: {x: -0.20019531, y: 0}
+  m_AnchoredPosition: {x: -41.5, y: 14.7}
   m_SizeDelta: {x: -25, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8721275656503936261
@@ -1929,8 +1929,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2120,7 +2120,7 @@ RectTransform:
   m_GameObject: {fileID: 8887638030427724117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.65, y: 1, z: 1}
+  m_LocalScale: {x: 1.65, y: 0.819375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2734479459581248902}
@@ -2128,8 +2128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.23600002}
   m_AnchorMax: {x: 0.69750005, y: 0.795}
-  m_AnchoredPosition: {x: 47.51001, y: 0.09510803}
-  m_SizeDelta: {x: -218.774, y: -0.1902}
+  m_AnchoredPosition: {x: 47.51001, y: 12.945105}
+  m_SizeDelta: {x: -218.774, y: 25.509792}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3267818177802114206
 CanvasRenderer:
@@ -2298,7 +2298,7 @@ MonoBehaviour:
   otherPlayerObjectsText: {fileID: 1302675208645880800}
   objetosTotalesText: {fileID: 2911990084240510236}
   totalRoundPointsText: {fileID: 559990882588820532}
-  playerWonText: {fileID: 0}
+  playerWonText: {fileID: 7595627749544782044}
   exitButton: {fileID: 7054481221154276453}
 --- !u!223 &2598722783251817956
 Canvas:

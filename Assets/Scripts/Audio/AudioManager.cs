@@ -17,6 +17,13 @@ public class AudioManager : MyMonoBehaviour
         Grab.OnThrowEvent += PlayThrowAudio;
         InGameController.instance.OnStartGame += PlaySortingOutMusic;
         crono.OnCronoCompleted += PlayMessingUpMusic;
+        InGameController.instance.OnStartGame += PlayStartEndAudio;
+        RoundController.OnGameCompleted += PlayStartEndAudio;
+        RoundController.On10SeconsLeft += PlayCountdownAudio;
+
+        //InGameController OnStartGame evento no funciona!!
+        PlaySortingOutMusic();
+        PlayStartEndAudio();
     }
 
 
@@ -26,6 +33,10 @@ public class AudioManager : MyMonoBehaviour
         CharacterController.walkStopEvent -= StopWalkAudio;
         Grab.OnGrabEvent -= PlayGrabAudio;
         Grab.OnThrowEvent -= PlayThrowAudio;
+        InGameController.instance.OnStartGame -= PlaySortingOutMusic;
+        crono.OnCronoCompleted -= PlayMessingUpMusic;
+        InGameController.instance.OnStartGame -= PlayStartEndAudio;
+        RoundController.OnGameCompleted -= PlayStartEndAudio;
     }
 
     private void PlayWalkAudio()
@@ -72,5 +83,17 @@ public class AudioManager : MyMonoBehaviour
         }
 
         audioSources[4].DOFade(0, 1f);
+    }
+
+    private void PlayStartEndAudio()
+    {
+        if (!audioSources[6].isPlaying)
+            audioSources[6].Play();
+    }
+
+    private void PlayCountdownAudio()
+    {
+        if (!audioSources[7].isPlaying && !uiController.gameOverPanel.gameObject.activeSelf)
+            audioSources[7].Play();
     }
 }
