@@ -160,11 +160,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nameObject: Mirror_01
-  _roomType: 02000000030000000400000005000000060000000000000001000000
+  _roomType: 020000000300000004000000050000000600000001000000
+  _propType: 0
+  _amountPoints: 0
   _baseSize: {x: 0.5, y: 0.5}
   _objetctPicked: 0
   _floorObject: 0
   _wallObject: 1
+  _realiseObject: 0
+  _cameraMain: {fileID: 0}
+  _canvasPointPref: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!114 &-3526084055622541546
 MonoBehaviour:
   m_ObjectHideFlags: 0

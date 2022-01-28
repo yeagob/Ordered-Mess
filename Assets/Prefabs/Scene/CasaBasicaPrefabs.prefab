@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 1
   roomHouseProps: []
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!1 &4049180710797791355
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 3
   roomHouseProps: []
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!1 &4269742894142732315
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 2
   roomHouseProps: []
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!1 &4491477267327513918
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 4
   roomHouseProps: []
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!1 &4510709469475911572
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 2
   roomHouseProps: []
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!1 &6603546999292464115
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 5
   roomHouseProps: []
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
 --- !u!1001 &318403326317049905
 PrefabInstance:
   m_ObjectHideFlags: 0

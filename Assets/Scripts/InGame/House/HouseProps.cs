@@ -2,30 +2,36 @@ using System.Collections;
 using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class HouseProps : MyMonoBehaviour
 {
         
     #region Attributes
     [Header("Name")]
-    public string _nameObject;
+    [HideInInspector]public string _nameObject;
     [Header("Enum")]
     public List<HousePropType> _roomType;
-    public HousePropType _propType;
-    public HousePropType _saveRomeType;
+    [HideInInspector]public HousePropType _propType;
+    [HideInInspector]private HousePropType _saveRomeType;
     [Header("Point")]
-    public /*internal*/ int _amountPoints = 0;
+    public int _amountPoints = 0;
     [Header("Size")]
     public Vector2 _baseSize;
 
     [Header("Bools")]
-    public  bool _objetctPicked;
-    public bool _floorObject;
-    public bool _wallObject;
+    public  bool  _objetctPicked;
+    public  bool  _floorObject;
+    public  bool  _wallObject;
+    private bool  _endCorrutineCheckPropRoom;
     [HideInInspector] public bool _realiseObject;
-
-  //int 
-  internal int _countRomeType = 0;
+    
+    //int 
+    internal int _countRomeType = 0;
+      
+    //camare
+    [SerializeField]private GameObject _cameraMain;
     // Singlentons
     [System.NonSerialized]
     public PhotonView photonView;
@@ -35,10 +41,13 @@ public class HouseProps : MyMonoBehaviour
     void Start()
     {   
         _amountPoints = 0;
+        _cameraMain = FindObjectOfType<Camera>().gameObject;
         photonView = GetComponent<PhotonView>();
+        //events
+        Room.OnTriggerExitProp += CheckPropsRoom;
     }
 
-    private void Update()
+    void Update()
     {
         PointsProp();
     }
@@ -64,39 +73,77 @@ public class HouseProps : MyMonoBehaviour
 
     private void PointsProp()
     {
-
-        if (_countRomeType < _roomType.Count && _roomType[_countRomeType] != _propType )
+        if (_endCorrutineCheckPropRoom && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
         {
-          _countRomeType++;
+
+            if (this.transform.rotation.x == _cameraMain.transform.rotation.x)
+            {
+                _amountPoints = 100;
+            }            
+            if (this.transform.rotation.x  < _cameraMain.transform.rotation.x)
+            {
+                _amountPoints = 100 / 2;
+            }            
+            if ( this.transform.rotation.x > _cameraMain.transform.rotation.x)
+            {
+                _amountPoints = 100 / 4;
+            }
         }
         else
         {
-            if (_propType != HousePropType.none && _countRomeType != _roomType.Count)
+            _amountPoints = 0;
+        }
+    }   
+     void CheckPropsRoom()
+    {
+        _endCorrutineCheckPropRoom = false;
+        _countRomeType = 0;
+        StartCoroutine(CorrutineCheckPropRoom());
+        
+    }
+
+    
+    IEnumerator CorrutineCheckPropRoom()
+    {
+        while (!_endCorrutineCheckPropRoom)
+        {   
+            
+            if (_countRomeType < _roomType.Count && _roomType[_countRomeType] != _propType )
             {
-                _saveRomeType = _roomType[_countRomeType];
-            }
-            if (_propType != HousePropType.none && _saveRomeType == _propType)
-            {
-                _amountPoints = 100;
+              _countRomeType++;
             }
             else
             {
-                _amountPoints = 0;
+            if (_propType != HousePropType.none)
+                {
+                    _saveRomeType = _roomType[_countRomeType];
+                    if (_saveRomeType == _propType)
+                    {
+                        _endCorrutineCheckPropRoom = true;
+                    }
+                    else
+                    {
+                        _amountPoints = 0;
+                        _endCorrutineCheckPropRoom = true;
+                    }
+                  
+                }
             }
+            yield return null;
         }
     }
     #endregion
 
     #region RPCs
     [PunRPC]
-        void RPCPickedTrue()
-        {
-            _objetctPicked = true;
-        }          
-        [PunRPC]
-        void RPCPickedFalse()
-        {
-            _objetctPicked = false;
-        }
-        #endregion
+    void RPCPickedTrue()
+    {
+        _objetctPicked = true;
+    }          
+    [PunRPC]
+    void RPCPickedFalse()
+    {
+        _objetctPicked = false;
+    }
+    #endregion
 }
