@@ -28,11 +28,11 @@ public class Spawnobjectmainmenu : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         int random = Random.Range(0, 50);
 
-        if (random < 25)
+        if (random < 20)
         {
             Invoke("SpawnCube", 0);
         }
-        else if (random > 25)
+        else if (random > 30)
         {
             Invoke("SpawnSphere", 0);
         }

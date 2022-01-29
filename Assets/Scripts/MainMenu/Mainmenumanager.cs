@@ -38,7 +38,7 @@ public class Mainmenumanager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("InGame");
-        
+         
 
     }
     
