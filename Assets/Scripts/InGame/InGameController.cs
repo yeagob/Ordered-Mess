@@ -64,7 +64,7 @@ public class InGameController : MonoBehaviour
     private void ChangePosPlayers()
     {
         //Player1
-        if (PhotonNetwork.IsMasterClient)
+        if (!networkManager.multiplayerOn || PhotonNetwork.IsMasterClient)
             player.transform.position = spawnPlayer1Round2.transform.position;
         else
         //Player2
