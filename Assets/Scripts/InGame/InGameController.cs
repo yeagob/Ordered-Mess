@@ -123,7 +123,8 @@ public class InGameController : MonoBehaviour
             }
         }
 
-            print("Player_2 total points" + calculatePointPlayer2);
+        print("Player_2 total points" + calculatePointPlayer2);
+        
         if (roundController.round1 && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
         {
            

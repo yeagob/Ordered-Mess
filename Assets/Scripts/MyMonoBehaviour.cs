@@ -13,6 +13,7 @@ public class MyMonoBehaviour : MonoBehaviour
 
     internal NetworkManager networkManager => NetworkManager.instance;
     internal Crono crono => gameController.crono;
+    internal RoundController roundControl => gameController.roundController;
 
 
 }

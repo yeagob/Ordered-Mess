@@ -10,6 +10,7 @@ public class HouseProps : MyMonoBehaviour
 {
 
     #region Attributes
+    
     [Header("Puntos")]
     public GameObject _pointUiPrefab;
     public GameObject _particlePrefab;
@@ -28,13 +29,13 @@ public class HouseProps : MyMonoBehaviour
 
     //Instantiated Points
     GameObject instantiatedPoints = null;
+    bool releasedObjectPoints = false;
 
+    Rigidbody rb;
 
     [Header("Bools")]
     public  bool  _objetctPicked;
-    public  bool  _floorObject;
-    public  bool  _wallObject;
-    private bool  _endCorrutineCheckPropRoom;
+    private bool  _inRightPlace;
     [HideInInspector] public bool _realiseObject;
     
     //int 
@@ -47,6 +48,7 @@ public class HouseProps : MyMonoBehaviour
     //Event
     public event Action<int> OnPointsRefresh;//<-Particle System
     public static event Action OnAnyPointsRefresh;//<-Sount
+
     #endregion
 
     #region UnityCalls
@@ -57,6 +59,7 @@ public class HouseProps : MyMonoBehaviour
         //events
         Room.OnTriggerExitProp += CheckPropsRoom;
         OnPointsRefresh += SpawnParticles;
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -73,6 +76,17 @@ public class HouseProps : MyMonoBehaviour
             if (Input.GetAxis("Mouse ScrollWheel") < -0.1)
                 transform.Rotate(-45, 0, 0);
         }
+
+        //Update points on object stop
+        if (releasedObjectPoints && rb.velocity.magnitude < 0.1f)
+        {
+            releasedObjectPoints = false;
+            
+            //Actualizamos los puntos
+            UpdatePoints();
+        }
+        //if (rb.velocity.magnitude > 0.1f)
+        //    releasedObjectPoints = true;
     }
     private void OnDestroy()
     {
@@ -88,6 +102,7 @@ public class HouseProps : MyMonoBehaviour
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
     }
+
     internal void Release()
     {
         _objetctPicked = false;
@@ -95,32 +110,55 @@ public class HouseProps : MyMonoBehaviour
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
 
-        //Actualizamos los puntos
-        UpdatePoints();
+        releasedObjectPoints = true;
     }
 
     private void UpdatePoints()
     {
-        if (_endCorrutineCheckPropRoom && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
+        if (roundControl.round1)
         {
 
-            if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
-                _amountPoints = _maxAmountPoints;
-            
-            if (Vector3.Angle(this.transform.forward, Vector3.up) > 45 && Vector3.Angle(this.transform.forward, Vector3.up) < 135)
-                _amountPoints = _maxAmountPoints / 4;
-            
-            if (Vector3.Angle(this.transform.forward, Vector3.up) > 135)
-                _amountPoints = _maxAmountPoints / 8;
+            if (_inRightPlace && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
+            {
+
+                if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
+                    _amountPoints = _maxAmountPoints;
+
+                if (Vector3.Angle(this.transform.forward, Vector3.up) > 45 && Vector3.Angle(this.transform.forward, Vector3.up) < 135)
+                    _amountPoints = _maxAmountPoints / 4;
+
+                if (Vector3.Angle(this.transform.forward, Vector3.up) > 135)
+                    _amountPoints = _maxAmountPoints / 8;
+            }
+            else
+            {
+                _amountPoints = 0;
+            }
         }
+        //ROUND 2
         else
         {
-            _amountPoints = 0;
+            if (_inRightPlace && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
+            {
+                _amountPoints = 0;
+            }
+            else
+            {
+                if (Vector3.Angle(this.transform.forward, Vector3.up) > 135)
+                    _amountPoints = _maxAmountPoints;
+
+                if (Vector3.Angle(this.transform.forward, Vector3.up) > 45 && Vector3.Angle(this.transform.forward, Vector3.up) < 135)
+                    _amountPoints = _maxAmountPoints / 4;
+
+                if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
+                    _amountPoints = _maxAmountPoints / 8;
+            }
         }
 
         //EVENTs
         if (OnPointsRefresh != null)
             OnPointsRefresh(_amountPoints);
+
         if (OnAnyPointsRefresh != null)
             OnAnyPointsRefresh();
 
@@ -142,7 +180,7 @@ public class HouseProps : MyMonoBehaviour
 
     void CheckPropsRoom()
     {
-        _endCorrutineCheckPropRoom = false;
+        _inRightPlace = false;
         _countRomeType = 0;
         StartCoroutine(CorrutineCheckPropRoom());
     }
@@ -150,7 +188,7 @@ public class HouseProps : MyMonoBehaviour
     
     IEnumerator CorrutineCheckPropRoom()
     {
-        while (!_endCorrutineCheckPropRoom)
+        while (!_inRightPlace)
         {   
             
             if (_countRomeType < _roomType.Count && _roomType[_countRomeType] != _propType )
@@ -159,17 +197,17 @@ public class HouseProps : MyMonoBehaviour
             }
             else
             {
-            if (_propType != HousePropType.none)
+            if (_countRomeType < _roomType.Count && _propType != HousePropType.none )
                 {
                     _saveRomeType = _roomType[_countRomeType];
                     if (_saveRomeType == _propType)
                     {
-                        _endCorrutineCheckPropRoom = true;
+                        _inRightPlace = true;
                     }
                     else
                     {
                         _amountPoints = 0;
-                        _endCorrutineCheckPropRoom = true;
+                        _inRightPlace = true;
                     }
                   
                 }
