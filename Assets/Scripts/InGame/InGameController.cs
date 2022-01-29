@@ -24,6 +24,10 @@ public class InGameController : MonoBehaviour
     public Transform spawnPlayer2;
     public Transform spawnPlayer2Round2;
 
+    [Header("Key Objects")]
+    public GameObject doorPlayer1;
+    public GameObject doorPlayer2;
+
     [Header("Player Rooms Lists")]
     [SerializeField] private List<Room> roomsPlayer1 = new List<Room>();
     [SerializeField] private List<Room> roomsPlayer2 = new List<Room>();
