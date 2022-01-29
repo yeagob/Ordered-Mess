@@ -23,6 +23,20 @@ public class Room : MyMonoBehaviour
     {
 
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // print(_roomType);
+            //Object name
+            if (_roomType != HousePropType.Center)
+               uiController.roomNameText.text = _roomType.ToString();
+            else
+               uiController.roomNameText.text = "";
+
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Pickable") && other.GetComponent<HouseProps>() != null && !other.GetComponent<HouseProps>()._realiseObject)
@@ -42,10 +56,7 @@ public class Room : MyMonoBehaviour
             }
         }
 
-        if (other.CompareTag("Player"))
-        {
-           // print(_roomType);
-        }
+      
 
     }
 
@@ -70,10 +81,11 @@ public class Room : MyMonoBehaviour
               OnTriggerExitProp();
             }
         }
+
     }
     #endregion
 
     #region Methods
-   
+
     #endregion
-    }
+}

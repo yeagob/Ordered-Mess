@@ -75,6 +75,9 @@ public class HouseProps : MyMonoBehaviour
                 transform.Rotate(45, 0, 0);
             if (Input.GetAxis("Mouse ScrollWheel") < -0.1)
                 transform.Rotate(-45, 0, 0);
+
+            if (_inRightPlace)
+                uiController.SetGoodColor(true);
         }
 
         //Update points on object stop
@@ -99,6 +102,7 @@ public class HouseProps : MyMonoBehaviour
     {
         _objetctPicked = true;
         gameObject.layer = LayerMask.NameToLayer("Grabbed");
+        uiController.objectNameText.text = _nameObject;
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
     }
@@ -106,6 +110,8 @@ public class HouseProps : MyMonoBehaviour
     internal void Release()
     {
         _objetctPicked = false;
+        uiController.objectNameText.text = "";
+        uiController.SetGoodColor(false);
         gameObject.layer = LayerMask.NameToLayer("Default");
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
@@ -181,6 +187,7 @@ public class HouseProps : MyMonoBehaviour
     void CheckPropsRoom()
     {
         _inRightPlace = false;
+        uiController.SetGoodColor(false);
         _countRomeType = 0;
         StartCoroutine(CorrutineCheckPropRoom());
     }
@@ -209,7 +216,9 @@ public class HouseProps : MyMonoBehaviour
                         _amountPoints = 0;
                         _inRightPlace = true;
                     }
-                  
+
+
+                     
                 }
             }
             yield return null;

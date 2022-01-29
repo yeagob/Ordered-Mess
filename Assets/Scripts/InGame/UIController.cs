@@ -30,6 +30,8 @@ public class UIController : MyMonoBehaviour
     public TextMeshProUGUI objetosTotalesText;
     public TextMeshProUGUI totalRoundPointsText;
     public TextMeshProUGUI playerWonText;
+    public TextMeshProUGUI objectNameText;
+    public TextMeshProUGUI roomNameText;
 
     [Header("Buttons")]
     public Button exitButton;
@@ -69,6 +71,7 @@ public class UIController : MyMonoBehaviour
         inGameUI.SetActive(true);
         networkUI.SetActive(false);
         mensajeInicioRonda.gameObject.SetActive(false);
+        objectNameText.text = "";
     }
 
     public void SetPlayerName(string localPlayer, string otherPlayer)
@@ -81,6 +84,12 @@ public class UIController : MyMonoBehaviour
     {
         objetosTotales = numObjects;
         objetosTotalesText.text = objetosTotales.ToString();
+    }
+
+    public void SetGoodColor(bool good)
+    {
+        roomNameText.color = good? Color.yellow : Color.white;
+        objectNameText.color = good? Color.yellow : Color.white;
     }
 
     public IEnumerator ShowTotalRoundPointsText()
