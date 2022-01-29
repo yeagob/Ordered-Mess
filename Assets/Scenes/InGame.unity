@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7816203, g: 0.8149379, b: 0.74953485, a: 1}
+  m_IndirectSpecularColor: {r: 0.78162044, g: 0.814938, b: 0.74953467, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2865,6 +2865,18 @@ PrefabInstance:
       propertyPath: m_FollowOffset.z
       value: -9.999998
       objectReference: {fileID: 0}
+    - target: {fileID: 963194228, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 963194228, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 963194228, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1247064742, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_Targets.Array.data[0].target
       value: 
@@ -2907,8 +2919,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: objectList.Array.size
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: objectList.Array.data[10]
+      value: 
+      objectReference: {fileID: -6043403816621936085, guid: b862698b4a06dc748abe234c72f0be57, type: 3}
+    - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: objectList.Array.data[11]
+      value: 
+      objectReference: {fileID: 3242752279420529028, guid: 956f44d1e06e40244bfe6068c2c7425f, type: 3}
+    - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: objectList.Array.data[12]
+      value: 
+      objectReference: {fileID: -6717952174879040102, guid: c0040560e8c73da4896d3536b1355768, type: 3}
+    - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: objectList.Array.data[13]
+      value: 
+      objectReference: {fileID: -5469487029620928905, guid: d96f7e1d2ddc49845b8dee9f77281b3b, type: 3}
+    - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: objectList.Array.data[14]
+      value: 
+      objectReference: {fileID: -5388853077314654133, guid: ec6c9501bb3bbb84b81c089e428b2282, type: 3}
+    - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: objectList.Array.data[15]
+      value: 
+      objectReference: {fileID: 9088357523406171882, guid: 584b54c2f5e5215408bfdd87ec7da83e, type: 3}
     - target: {fileID: 1557133199276074999, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: uiMatchmaking
       value: 
