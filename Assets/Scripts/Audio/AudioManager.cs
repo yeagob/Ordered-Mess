@@ -20,7 +20,6 @@ public class AudioManager : MyMonoBehaviour
         InGameController.instance.OnStartGame += PlayStartEndAudio;
         RoundController.OnGameCompleted += PlayStartEndAudio;
         RoundController.On10SeconsLeft += PlayCountdownAudio;
-        HouseProps.OnAnyPointsRefresh += PlayPointAudio;
 
         //InGameController OnStartGame evento no funciona!!
         PlaySortingOutMusic();
@@ -96,11 +95,5 @@ public class AudioManager : MyMonoBehaviour
     {
         if (!audioSources[7].isPlaying && !uiController.gameOverPanel.gameObject.activeSelf)
             audioSources[7].Play();
-    }
-
-    private void PlayPointAudio()
-    {
-        if (!audioSources[8].isPlaying)
-            audioSources[8].Play();
     }
 }

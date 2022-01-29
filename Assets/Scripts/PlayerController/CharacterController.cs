@@ -11,7 +11,6 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private ConfigurableJoint hipJoint;
     [SerializeField] private Rigidbody hip;
     [SerializeField] private ParticleSystem dustParticle;
-    [SerializeField] private SkinnedMeshRenderer baseRender;
 
     [SerializeField] private Animator targetAnimator;
 
@@ -32,7 +31,6 @@ public class CharacterController : MonoBehaviour
         photonView = GetComponent<PhotonView>();
 
         InGameController.instance.OnStartGame += LoadPlayerProfile;
-        InGameController.instance.OnStartGame += AsignPlayerColor;
     }
 
     // Update is called once per frame
@@ -93,13 +91,5 @@ public class CharacterController : MonoBehaviour
     {
         speed = ProfileControl.playerProfile.playerSpeed;
         speedRun = ProfileControl.playerProfile.playerSpeedRun;
-    }
-
-    private void AsignPlayerColor()
-    {
-        if (PhotonNetwork.IsMasterClient)
-            baseRender.material = InGameController.instance.pinkMat;
-        else
-            baseRender.material = InGameController.instance.blueMat;
     }
 }

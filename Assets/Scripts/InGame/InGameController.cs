@@ -28,10 +28,6 @@ public class InGameController : MonoBehaviour
     [SerializeField] private List<Room> roomsPlayer1 = new List<Room>();
     [SerializeField] private List<Room> roomsPlayer2 = new List<Room>();
 
-    [Header("Player Colors")]
-    public Material pinkMat;
-    public Material blueMat;
-
     //POINTS
     internal int pointFirstRoundPlayer1;
     internal int pointFirstRoundPlayer2;
