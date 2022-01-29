@@ -402,6 +402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: House Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5056350201123098815, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_Name
+      value: PuertaCasaNoROTA Player 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5124507843796392645, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: sceneViewId
       value: 12
@@ -1005,6 +1009,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67062ccc742b9f6459321cf3ff3a548c, type: 3}
+--- !u!1 &703104064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6303692319218536149, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+  m_PrefabInstance: {fileID: 618102390640406085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,6 +1270,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574a71a8e829974eb2a19d125bf1a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1014387618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5056350201123098815, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+  m_PrefabInstance: {fileID: 59406566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1096080095 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7595627749544782044, guid: 62717a863d36895488f097aa2f767cfc, type: 3}
@@ -2409,9 +2423,21 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 3652839631602947270, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4550309406464205891, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: m_Name
       value: House Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056350201123098815, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_Name
+      value: PuertaCasaNoROTA Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056350201123098815, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5124507843796392645, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: sceneViewId
@@ -2715,7 +2741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480247331716954369, guid: 4926735e0c3ff9b46a82e32e8d6e566b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.81595564
+      value: 3.97
       objectReference: {fileID: 0}
     - target: {fileID: 4480247331716954369, guid: 4926735e0c3ff9b46a82e32e8d6e566b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2723,7 +2749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4480247331716954369, guid: 4926735e0c3ff9b46a82e32e8d6e566b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0277761
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 4480247331716954369, guid: 4926735e0c3ff9b46a82e32e8d6e566b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2853,6 +2879,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107836064, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.35
+      objectReference: {fileID: 0}
     - target: {fileID: 719678764, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_FollowOffset.x
       value: -0.00005996227
@@ -2883,7 +2913,7 @@ PrefabInstance:
       objectReference: {fileID: 46539501}
     - target: {fileID: 1247064743, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000059790207
+      value: 0.000059909416
       objectReference: {fileID: 0}
     - target: {fileID: 1247064743, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2903,7 +2933,7 @@ PrefabInstance:
       objectReference: {fileID: 46539501}
     - target: {fileID: 1656316328, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0502203
+      value: 5.836176
       objectReference: {fileID: 0}
     - target: {fileID: 1656316328, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2911,7 +2941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1656316328, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.802276
+      value: -10.060052
       objectReference: {fileID: 0}
     - target: {fileID: 625667607430683870, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: objectOffser
@@ -2995,11 +3025,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3568729210768401411, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.11
+      value: 12.48
       objectReference: {fileID: 0}
     - target: {fileID: 3568729210768401411, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3957107412924111105, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.87
       objectReference: {fileID: 0}
     - target: {fileID: 4549243600676431412, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3025,6 +3059,14 @@ PrefabInstance:
       propertyPath: pinkMat
       value: 
       objectReference: {fileID: 2100000, guid: 65b1472e9e60432438c3e260c103f0ec, type: 2}
+    - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: doorPlayer1
+      value: 
+      objectReference: {fileID: 1014387618}
+    - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
+      propertyPath: doorPlayer2
+      value: 
+      objectReference: {fileID: 703104064}
     - target: {fileID: 5637712899841518936, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: audioManager
       value: 
@@ -3087,7 +3129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6254859100961456903, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.24
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 6406432288462269380, guid: b8ce973a5a4197d4ead83c7a8b948bf3, type: 3}
       propertyPath: m_Name
