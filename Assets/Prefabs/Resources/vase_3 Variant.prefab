@@ -163,8 +163,6 @@ MonoBehaviour:
   _maxAmountPoints: 1000
   _baseSize: {x: 0.1, y: 0.2}
   _objetctPicked: 0
-  _floorObject: 1
-  _wallObject: 0
   _realiseObject: 0
 --- !u!114 &3807806249875363369
 MonoBehaviour:
