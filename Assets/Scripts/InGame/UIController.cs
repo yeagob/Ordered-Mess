@@ -36,8 +36,9 @@ public class UIController : MyMonoBehaviour
 
     private void Awake()
     {
-        
+        exitButton.onClick.AddListener(Exit);
     }
+
 
     // Start is called before the first frame update
     void Start()
@@ -110,5 +111,9 @@ public class UIController : MyMonoBehaviour
         yield return new WaitForSeconds(2);
         //Back to main menu
         SceneManager.LoadScene(0);
+    }
+    private void Exit()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
