@@ -61,9 +61,11 @@ public class UIController : MyMonoBehaviour
     public IEnumerator mostrarMnsInicial()
     {
         mensajeInicioRonda.gameObject.SetActive(true);
+        mensajeInicioRonda.transform.DOScale(1, 0.5f);
         yield return new WaitForSeconds(3);
+        mensajeInicioRonda.transform.DOScale(0, 0.2f);
+        yield return new WaitForSeconds(1);
         mensajeInicioRonda.gameObject.SetActive(false);
-
     }
 
     internal void StartGame()

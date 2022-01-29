@@ -25,15 +25,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.016
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.016
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.016
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,6 +199,4 @@ MonoBehaviour:
   _maxAmountPoints: 1000
   _baseSize: {x: 0.1, y: 0.2}
   _objetctPicked: 0
-  _floorObject: 1
-  _wallObject: 0
   _realiseObject: 0
