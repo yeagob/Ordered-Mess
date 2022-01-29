@@ -5073,7 +5073,7 @@ MonoBehaviour:
   - {fileID: 6660682493383056337}
   - {fileID: 2971116787621058901}
   - {fileID: 7143191868873135946}
-  sceneViewId: 0
+  sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!1 &7371297139490151132
@@ -5814,7 +5814,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.002068091
+  m_Radius: 0.004
   m_Height: 0.0073761037
   m_Direction: 1
   m_Center: {x: 0.00047395995, y: 0.002382823, z: -4.627579e-10}
@@ -6667,7 +6667,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.002068091
+  m_Radius: 0.004
   m_Height: 0.0073761037
   m_Direction: 1
   m_Center: {x: 0.00047395995, y: 0.002382823, z: -4.627579e-10}
