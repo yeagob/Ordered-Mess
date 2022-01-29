@@ -4,9 +4,11 @@ using UnityEngine.SceneManagement;
     public class GameManager : MonoBehaviour
     {
         public Scenes currentScene;
-
-        #region Singleton
-        public static GameManager instance;
+        
+        // true : single      false : multi
+        public static bool singlePlayer;
+    #region Singleton
+    public static GameManager instance;
 
         void Awake()
         {

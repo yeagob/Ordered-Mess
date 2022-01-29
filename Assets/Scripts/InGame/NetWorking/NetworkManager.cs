@@ -37,6 +37,15 @@ using System;
         {
             instance = this;
             panelMatchmajing.SetActive(false);
+
+            if (GameManager.singlePlayer)
+            {
+                multiplayerOn = true;
+            }
+            else if (!GameManager.singlePlayer)
+            {
+                multiplayerOn = false;
+            }
         }
 
         private void Start()

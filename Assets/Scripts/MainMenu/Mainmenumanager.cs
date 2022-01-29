@@ -9,16 +9,19 @@ public class Mainmenumanager : MonoBehaviour
 {
 
     [SerializeField] Button findGameButton;
-    [SerializeField] Button optionsButton;
+    [SerializeField] Button singleButton;
+    [SerializeField] Button controlsButton;
     [SerializeField] Button tutorialButton;
     [SerializeField] Button exitButton;
     private void Awake()
     {
         findGameButton.onClick.AddListener(FindGame);
-        optionsButton.onClick.AddListener(options);
+        singleButton.onClick.AddListener(Singlemode);
+        controlsButton.onClick.AddListener(controls);
         tutorialButton.onClick.AddListener(tutorial);
         exitButton.onClick.AddListener(exit);
     }
+
 
 
 
@@ -37,6 +40,7 @@ public class Mainmenumanager : MonoBehaviour
     private void FindGame()
     {
         Time.timeScale = 1;
+        GameManager.singlePlayer = true;
         SceneManager.LoadScene("InGame");
          
 
@@ -52,9 +56,15 @@ public class Mainmenumanager : MonoBehaviour
 
     }
 
-    private void options()
+    private void controls()
     {
 
     }
 
+    private void Singlemode()
+    {
+        Time.timeScale = 1;
+        GameManager.singlePlayer = false;
+        SceneManager.LoadScene("InGame");
+    }
 }
