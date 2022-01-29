@@ -8,36 +8,39 @@ using UnityEngine;
 public class InGameController : MonoBehaviour
 {
     [Header("Controllers")]
+    //Main tools
     public UIController uIController;
     public NetworkManager networkManager;
     public CharacterController player;
     public AudioManager audioManager;
     public CinemachineVirtualCamera cinemachine;
+    public RoundController roundController;
     public Crono crono;
-    internal int pointFirstRoundPlayer1;
-    internal int pointFirstRoundPlayer2;
-
-    internal int pointSecondRoundPlayer1;
-    internal int pointSecondRoundPlayer2;
-
-
-
 
     [Header("Key Objects")]
     public GameObject playerPrefab;
     public Transform spawnPlayer1;
+    public Transform spawnPlayer1Round2;
     public Transform spawnPlayer2;
+    public Transform spawnPlayer2Round2;
+
+    [Header("Player Rooms Lists")]
+    [SerializeField] private List<Room> roomsPlayer1 = new List<Room>();
+    [SerializeField] private List<Room> roomsPlayer2 = new List<Room>();
+
+    //POINTS
+    internal int pointFirstRoundPlayer1;
+    internal int pointFirstRoundPlayer2;
+    internal int pointSecondRoundPlayer1;
+    internal int pointSecondRoundPlayer2;
 
     public static InGameController instance;
 
     public event Action OnStartGame;
 
-    [Header("List")]
-    [SerializeField] private List<Room> roomsPlayer1 = new List<Room>();
-    [SerializeField] private List<Room> roomsPlayer2 = new List<Room>();
 
-    //Main tools
-    [SerializeField] public RoundController roundController;
+
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -55,6 +58,17 @@ public class InGameController : MonoBehaviour
 
         //events
         crono.OnCronoCompleted += LoadPointsPlayers;
+        crono.OnCronoCompleted += ChangePosPlayers;
+    }
+
+    private void ChangePosPlayers()
+    {
+        //Player1
+        if (PhotonNetwork.IsMasterClient)
+            player.transform.position = spawnPlayer1Round2.transform.position;
+        else
+        //Player2
+            player.transform.position = spawnPlayer2Round2.transform.position;
     }
 
     internal void StartGame()
@@ -106,14 +120,14 @@ public class InGameController : MonoBehaviour
         }
 
             print("Player_2 total points" + calculatePointPlayer2);
-        if (roundController.sortingOut && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
+        if (roundController.round1 && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
         {
            
             calculatePointPlayer1 = pointFirstRoundPlayer1 - calculatePointPlayer1;
             calculatePointPlayer2 = pointFirstRoundPlayer2 - calculatePointPlayer2;
         }
 
-        if (!roundController.sortingOut && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
+        if (!roundController.round1 && pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
         {
 
             pointSecondRoundPlayer1 = pointFirstRoundPlayer1 - calculatePointPlayer1;

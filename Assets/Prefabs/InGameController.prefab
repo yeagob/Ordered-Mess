@@ -461,7 +461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247064741}
   m_LocalRotation: {x: -0.22548197, y: -0.001175527, z: 0.0002720668, w: 0.9742466}
-  m_LocalPosition: {x: -0.00000017207608, y: 0.19038582, z: 22.361465}
+  m_LocalPosition: {x: -0.00000017207725, y: 0.19039154, z: 22.361607}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -886,10 +886,13 @@ MonoBehaviour:
   player: {fileID: 0}
   audioManager: {fileID: 0}
   cinemachine: {fileID: 1656316327}
+  roundController: {fileID: 160583511}
   crono: {fileID: 0}
   playerPrefab: {fileID: 4480247331716954370, guid: 4926735e0c3ff9b46a82e32e8d6e566b, type: 3}
   spawnPlayer1: {fileID: 3957107412924111105}
+  spawnPlayer1Round2: {fileID: 6254859100961456903}
   spawnPlayer2: {fileID: 107836064}
+  spawnPlayer2Round2: {fileID: 3568729210768401411}
   roomsPlayer1:
   - {fileID: 0}
   - {fileID: 0}
@@ -904,7 +907,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  roundController: {fileID: 160583511}
 --- !u!1 &7574769746863426264
 GameObject:
   m_ObjectHideFlags: 0

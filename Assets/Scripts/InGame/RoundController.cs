@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class RoundController : MyMonoBehaviour
 {
-    public bool sortingOut;
+    public bool round1;
     public static event Action OnGameCompleted;
     public static event Action On10SeconsLeft;
 
@@ -26,7 +26,7 @@ public class RoundController : MyMonoBehaviour
 
     private void CronoCompleted()
     {
-        if (sortingOut)
+        if (round1)
         {
             StartCoroutine(uiController.mostrarMnsInicial());
 
@@ -41,7 +41,7 @@ public class RoundController : MyMonoBehaviour
             uiController.rondaText.text = "Round: 2/2";
             crono.totalTimer = ProjectSettings.countdownRoundTime;
             crono.timerIsRunning = true;
-            sortingOut = !sortingOut;
+            round1 = !round1;
         }
         else
         {
