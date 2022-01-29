@@ -24,6 +24,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.1077538
       objectReference: {fileID: 0}
@@ -71,6 +83,10 @@ PrefabInstance:
       propertyPath: m_LightmapTilingOffset.z
       value: .369029999
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 398550300266fa4489a6fec1bb983495, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77cc829851270f641a67e7e2132e861a, type: 3}
 --- !u!1 &4459051658418633083 stripped
@@ -94,8 +110,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &8229254748017594141
-SphereCollider:
+--- !u!65 &8151726955223288881
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -105,8 +121,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 9.560486
-  m_Center: {x: 1.6038828e-21, y: 9.347449, z: -0.0000010379517}
+  m_Size: {x: 9.735574, y: 20.675554, z: 9.735571}
+  m_Center: {x: 0.00000047683716, y: 10.328288, z: -0.0000011920929}
 --- !u!114 &-7634490900097177218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,13 +192,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Vase_03
   _roomType: 0200000003000000040000000500000006000000
   _propType: 0
-  _amountPoints: 0
+  _maxAmountPoints: 1000
   _baseSize: {x: 0.1, y: 0.2}
   _objetctPicked: 0
   _floorObject: 1
   _wallObject: 0
   _realiseObject: 0
-  _cameraMain: {fileID: 0}

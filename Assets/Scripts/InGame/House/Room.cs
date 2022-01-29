@@ -25,7 +25,7 @@ public class Room : MyMonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pickable") && !other.GetComponent<HouseProps>()._realiseObject)
+        if (other.CompareTag("Pickable") && other.GetComponent<HouseProps>() != null && !other.GetComponent<HouseProps>()._realiseObject)
         {
             roomHouseProps.Remove(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = true;
@@ -51,7 +51,7 @@ public class Room : MyMonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Pickable") && !other.GetComponent<HouseProps>()._objetctPicked)
+        if (other.CompareTag("Pickable") && other.GetComponent<HouseProps>() != null && !other.GetComponent<HouseProps>()._objetctPicked)
         {
             roomHouseProps.Add(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = false;

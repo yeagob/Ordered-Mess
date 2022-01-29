@@ -370,9 +370,85 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 96558401991352696, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 441860779850626750, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 600722871841916179, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716981190779214815, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534279848985471716, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147748638260156668, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257760449869906300, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 4550309406464205891, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: m_Name
       value: House Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124507843796392645, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279701431293114391, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_TagString
+      value: Pickable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347555803062556634, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747902625124406850, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275592856039939950, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438521633695001329, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028390353140238528, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327671127006439480, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333183099058539527, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809415832158917086, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867579380231319379, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006508738497381237, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
@@ -2290,9 +2366,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 96558401991352696, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 441860779850626750, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 600722871841916179, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716981190779214815, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534279848985471716, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3147748638260156668, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3257760449869906300, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 4550309406464205891, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: m_Name
       value: House Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124507843796392645, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347555803062556634, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747902625124406850, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275592856039939950, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438521633695001329, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028390353140238528, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327671127006439480, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333183099058539527, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809415832158917086, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8867579380231319379, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006508738497381237, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: sceneViewId
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
