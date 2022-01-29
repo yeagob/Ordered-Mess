@@ -62,6 +62,16 @@ public class InGameController : MonoBehaviour
         if (networkManager.multiplayerOn)
         {
             networkManager.OnNetworkStartGame += StartGame;
+            if (PhotonNetwork.IsMasterClient)
+            {
+                doorPlayer1.SetActive(false);
+                doorPlayer2.SetActive(true);
+            }
+            else
+            {
+                doorPlayer2.SetActive(false);
+                doorPlayer1.SetActive(true);
+            }
         }
         else
             StartGame();
@@ -78,7 +88,11 @@ public class InGameController : MonoBehaviour
             player.transform.position = spawnPlayer2Round2.transform.position;
             return;
         }
-
+        else
+        {
+            doorPlayer2.SetActive(true);
+            doorPlayer1.SetActive(true);
+        }
         //Player1
         if (!networkManager.multiplayerOn || PhotonNetwork.IsMasterClient)
             player.transform.position = spawnPlayer1Round2.transform.position;
