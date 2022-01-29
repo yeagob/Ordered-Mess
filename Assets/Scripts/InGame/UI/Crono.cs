@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Crono : MonoBehaviour
 {
-    public float totalTimer = ProjectSettings.countdownRoundTime;
+    internal float totalTimer = ProjectSettings.countdownRoundTime;
     public bool timerIsRunning = false;
     public TextMeshProUGUI cronoText;
 

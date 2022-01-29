@@ -580,7 +580,7 @@ MonoBehaviour:
   findGameButton: {fileID: 1509595673}
   optionsButton: {fileID: 0}
   tutorialButton: {fileID: 0}
-  exitButton: {fileID: 0}
+  exitButton: {fileID: 2087702120}
 --- !u!4 &568270937
 Transform:
   m_ObjectHideFlags: 0
