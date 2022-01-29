@@ -50,9 +50,9 @@ public class RoundController : MyMonoBehaviour
 
             StartCoroutine(uiController.ShowTotalRoundPointsText());
             if (PhotonNetwork.IsMasterClient)
-                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointSecondRoundPlayer1 + " points";
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer1 + " points";
             else
-                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointSecondRoundPlayer2 + " points";
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer2 + " points";
 
             StartCoroutine(uiController.ShowGameOverPanel());
 
