@@ -12,6 +12,7 @@ public class CharacterController : MonoBehaviour
     [SerializeField] private Rigidbody hip;
     [SerializeField] private ParticleSystem dustParticle;
     [SerializeField] private SkinnedMeshRenderer baseRender;
+    [SerializeField] private GameObject youTxt;
 
     [SerializeField] private Animator targetAnimator;
 
@@ -33,6 +34,9 @@ public class CharacterController : MonoBehaviour
 
         InGameController.instance.OnStartGame += LoadPlayerProfile;
         InGameController.instance.OnStartGame += AsignPlayerColor;
+
+        if (!photonView.IsMine)
+            youTxt.SetActive(false);
     }
 
     // Update is called once per frame
@@ -51,9 +55,19 @@ public class CharacterController : MonoBehaviour
         {
             //Run
             if (Input.GetKey(KeyCode.LeftShift))
+            {
                 this.speed = speedRun;
+
+                if(!dustParticle.isPlaying)
+                    dustParticle.Play();
+            }
             else
+            {
                 this.speed = ProfileControl.playerProfile.playerSpeed;
+
+                if (dustParticle.isPlaying)
+                    dustParticle.Stop();
+            }
 
             float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 
@@ -66,8 +80,6 @@ public class CharacterController : MonoBehaviour
             if (walkEvent != null)
                 walkEvent();
 
-            if(!dustParticle.isPlaying)
-                dustParticle.Play();
 
         }  else {
             this.walk = false;
