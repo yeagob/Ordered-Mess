@@ -4895,6 +4895,7 @@ MonoBehaviour:
   hipJoint: {fileID: 4480247329742416067}
   hip: {fileID: 4480247329742416066}
   dustParticle: {fileID: 1014171849}
+  baseRender: {fileID: 5403599074719245348}
   targetAnimator: {fileID: 4480247331656162799}
   hipTransform: {fileID: 7310212838064829859}
 --- !u!114 &4720465840860784852
@@ -6469,6 +6470,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetLimb: {fileID: 47712298083683974}
   m_ConfigurableJoint: {fileID: 0}
+--- !u!137 &5403599074719245348 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8417361359673230750, guid: 2a8dedd11b00409468e3117b39a73d74, type: 3}
+  m_PrefabInstance: {fileID: 4480247330228478394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5495391880277357494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8245674173772747276, guid: 2a8dedd11b00409468e3117b39a73d74, type: 3}
