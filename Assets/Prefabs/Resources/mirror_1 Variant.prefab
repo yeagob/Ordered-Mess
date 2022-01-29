@@ -32,12 +32,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8920164852daafb4ea1cbf5c4f29f9c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 8920164852daafb4ea1cbf5c4f29f9c6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8920164852daafb4ea1cbf5c4f29f9c6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8920164852daafb4ea1cbf5c4f29f9c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -160,16 +164,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Mirror_01
   _roomType: 020000000300000004000000050000000600000001000000
   _propType: 0
-  _amountPoints: 0
+  _maxAmountPoints: 1000
   _baseSize: {x: 0.5, y: 0.5}
   _objetctPicked: 0
   _floorObject: 0
   _wallObject: 1
   _realiseObject: 0
-  _cameraMain: {fileID: 0}
 --- !u!114 &-3526084055622541546
 MonoBehaviour:
   m_ObjectHideFlags: 0

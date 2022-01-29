@@ -36,12 +36,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LightmapTilingOffset.z
       value: .166847229
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55174ab90522a0a4485e45f0cb530b5b, type: 2}
     - target: {fileID: 2300002, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
       propertyPath: m_LightmapIndex
       value: 1
@@ -131,6 +139,10 @@ PrefabInstance:
       propertyPath: m_LightmapTilingOffset.z
       value: .641353607
       objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 300e1fad8d563144891c3fbde2116547, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bac686a178055394f9dfa2e461faba8b, type: 3}
 --- !u!1 &1348137689234952354 stripped
@@ -220,16 +232,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Lamp_03
   _roomType: 020000000300000004000000050000000600000000000000
   _propType: 0
-  _amountPoints: 0
+  _maxAmountPoints: 1000
   _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
   _floorObject: 1
   _wallObject: 0
   _realiseObject: 0
-  _cameraMain: {fileID: 0}
 --- !u!114 &2146489642288161865
 MonoBehaviour:
   m_ObjectHideFlags: 0

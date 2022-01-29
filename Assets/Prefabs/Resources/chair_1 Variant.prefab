@@ -36,12 +36,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2a377b97363a554a96a26b876de1213, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d2a377b97363a554a96a26b876de1213, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2a377b97363a554a96a26b876de1213, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2a377b97363a554a96a26b876de1213, type: 3}
       propertyPath: m_LocalPosition.x
@@ -224,16 +228,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Chair_01
   _roomType: 0200000003000000040000000500000006000000
   _propType: 0
-  _amountPoints: 0
+  _maxAmountPoints: 1000
   _baseSize: {x: 1, y: 1}
   _objetctPicked: 0
   _floorObject: 1
   _wallObject: 0
   _realiseObject: 0
-  _cameraMain: {fileID: 0}
 --- !u!114 &8377428751279008120
 MonoBehaviour:
   m_ObjectHideFlags: 0

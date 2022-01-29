@@ -12,6 +12,7 @@ public class HouseProps : MyMonoBehaviour
     #region Attributes
     [Header("Puntos")]
     public GameObject _pointUiPrefab;
+    public GameObject _particlePrefab;
 
     [Header("Name")]
     [HideInInspector]public string _nameObject;
@@ -27,6 +28,7 @@ public class HouseProps : MyMonoBehaviour
 
     //Instantiated Points
     GameObject instantiatedPoints = null;
+
 
     [Header("Bools")]
     public  bool  _objetctPicked;
@@ -54,6 +56,7 @@ public class HouseProps : MyMonoBehaviour
         photonView = GetComponent<PhotonView>();
         //events
         Room.OnTriggerExitProp += CheckPropsRoom;
+        OnPointsRefresh += SpawnParticles;
     }
 
     void Update()
@@ -123,6 +126,7 @@ public class HouseProps : MyMonoBehaviour
 
 
         SpawnUiPoints();
+        
     }
 
     internal void SpawnUiPoints()
@@ -172,7 +176,15 @@ public class HouseProps : MyMonoBehaviour
             }
             yield return null;
         }
+    } 
+    private void SpawnParticles(int point)
+    {
+        if (point > 0)
+        {
+           Instantiate(_particlePrefab, transform.position, Quaternion.identity);
+        }
     }
+    
     #endregion
 
     #region RPCs
