@@ -19,8 +19,7 @@ public class HouseProps : MyMonoBehaviour
     [HideInInspector]public string _nameObject;
     [Header("Enum")]
     public List<HousePropType> _roomType;
-    [HideInInspector]public HousePropType _propType;
-    [HideInInspector]private HousePropType _saveRomeType;
+    /*[HideInInspector]*/public HousePropType _propType;
     [Header("Points")]
     public int _maxAmountPoints = 1000;
     internal int _amountPoints = 0;
@@ -29,17 +28,18 @@ public class HouseProps : MyMonoBehaviour
 
     //Instantiated Points
     GameObject instantiatedPoints = null;
-    bool releasedObjectPoints = false;
+    bool releasedObjectPoints = false;    
+    //Instantiated Particle
+    GameObject instantiatedParticle = null;
+
 
     Rigidbody rb;
 
     [Header("Bools")]
     public  bool  _objetctPicked;
-    private bool  _inRightPlace;
+    [SerializeField]private bool  _inRightPlace;
     [HideInInspector] public bool _realiseObject;
     
-    //int 
-    internal int _countRomeType = 0;
       
     // Singlentons
     [System.NonSerialized]
@@ -124,7 +124,7 @@ public class HouseProps : MyMonoBehaviour
         if (roundControl.round1)
         {
 
-            if (_inRightPlace && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
+            if (_inRightPlace && _propType != HousePropType.none)
             {
 
                 if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
@@ -144,7 +144,7 @@ public class HouseProps : MyMonoBehaviour
         //ROUND 2
         else
         {
-            if (_inRightPlace && _saveRomeType == _propType && _saveRomeType != HousePropType.none)
+            if (_inRightPlace && _propType != HousePropType.none)
             {
                 _amountPoints = 0;
             }
@@ -188,47 +188,37 @@ public class HouseProps : MyMonoBehaviour
     {
         _inRightPlace = false;
         uiController.SetGoodColor(false);
-        _countRomeType = 0;
-        StartCoroutine(CorrutineCheckPropRoom());
+        if (_roomType.Contains(_propType))
+        {
+           _inRightPlace = true;
+        }
     }
 
-    
-    IEnumerator CorrutineCheckPropRoom()
-    {
-        while (!_inRightPlace)
-        {   
-            
-            if (_countRomeType < _roomType.Count && _roomType[_countRomeType] != _propType )
-            {
-              _countRomeType++;
-            }
-            else
-            {
-            if (_countRomeType < _roomType.Count && _propType != HousePropType.none )
-                {
-                    _saveRomeType = _roomType[_countRomeType];
-                    if (_saveRomeType == _propType)
-                    {
-                        _inRightPlace = true;
-                    }
-                    else
-                    {
-                        _amountPoints = 0;
-                        _inRightPlace = true;
-                    }
-
-
-                     
-                }
-            }
-            yield return null;
-        }
-    } 
     private void SpawnParticles(int point)
     {
         if (point > 0)
         {
-           Instantiate(_particlePrefab, transform.position, Quaternion.identity);
+            instantiatedParticle = Instantiate(_particlePrefab, transform.position, Quaternion.identity);
+            ColorParticle(point);
+        }
+    }
+    
+    private void ColorParticle(int point)
+    {
+        if (point < _maxAmountPoints / 8)
+        {
+            ParticleSystem. MainModule settings = instantiatedParticle.GetComponentInChildren<ParticleSystem>().main;
+            settings. startColor = new ParticleSystem. MinMaxGradient(Color.red);
+        }
+        if (point > _maxAmountPoints / 8 && point < _maxAmountPoints / 4)
+        {
+            ParticleSystem. MainModule settings = instantiatedParticle.GetComponentInChildren<ParticleSystem>().main;
+            settings. startColor = new ParticleSystem. MinMaxGradient(Color.yellow);
+        }
+        if (point > _maxAmountPoints / 4)
+        {
+            ParticleSystem. MainModule settings = instantiatedParticle.GetComponentInChildren<ParticleSystem>().main;
+            settings. startColor = new ParticleSystem. MinMaxGradient(Color.green);
         }
     }
     
