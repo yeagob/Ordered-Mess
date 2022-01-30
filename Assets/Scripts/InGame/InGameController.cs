@@ -70,6 +70,7 @@ public class InGameController : MonoBehaviour
             if (PhotonNetwork.IsMasterClient)
             {
                 doorPlayer2.SetActive(true);
+                doorPlayer1.SetActive(false);
             }
             else
             {
