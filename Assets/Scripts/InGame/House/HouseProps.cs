@@ -102,6 +102,8 @@ public class HouseProps : MyMonoBehaviour
     {
         if (onlyRound2 && roundControl.round1)
             return false;
+        
+        photonView.RequestOwnership();
 
         rb.isKinematic = true;
         transform.position = targetPickup.position;
