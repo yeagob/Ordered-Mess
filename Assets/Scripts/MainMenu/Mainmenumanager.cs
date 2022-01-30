@@ -13,6 +13,12 @@ public class Mainmenumanager : MonoBehaviour
     [SerializeField] Button controlsButton;
     [SerializeField] Button tutorialButton;
     [SerializeField] Button exitButton;
+    [SerializeField] Button volverButton;
+
+
+    [SerializeField] GameObject panelControl;
+    [SerializeField] GameObject panelMain;
+
     private void Awake()
     {
         findGameButton.onClick.AddListener(FindGame);
@@ -20,6 +26,15 @@ public class Mainmenumanager : MonoBehaviour
         controlsButton.onClick.AddListener(controls);
         tutorialButton.onClick.AddListener(tutorial);
         exitButton.onClick.AddListener(exit);
+        volverButton.onClick.AddListener(SetInvisibleControls);
+
+    }
+
+    private void SetInvisibleControls()
+    {
+        panelControl.SetActive(false);
+        panelMain.SetActive(true);
+        
     }
 
 
@@ -58,7 +73,9 @@ public class Mainmenumanager : MonoBehaviour
 
     private void controls()
     {
-
+        panelMain.SetActive(false);
+        panelControl.SetActive(true);
+        controlsButton.enabled = true;
     }
 
     private void Singlemode()
