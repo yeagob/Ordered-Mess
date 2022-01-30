@@ -66,7 +66,6 @@ public class HouseProps : MyMonoBehaviour
     void Update()
     {
         
-        print(Input.GetAxis("Mouse ScrollWheel"));
         if (_objetctPicked)
         {
             //Nos aseguramos que siempre esté en el centro de la mano el objeto
@@ -143,17 +142,18 @@ public class HouseProps : MyMonoBehaviour
 
     private void UpdatePoints()
     {
+        float angle = Vector3.Angle(this.transform.forward, Vector3.up);
         if (roundControl.round1)
         {
             if (_inRightPlace)
             {
-                if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
+                if (angle < 45)
                     _amountPoints = _maxAmountPoints;
 
-                if (Vector3.Angle(this.transform.forward, Vector3.up) > 45 && Vector3.Angle(this.transform.forward, Vector3.up) < 135)
+                if (angle > 45 && angle < 135)
                     _amountPoints = _maxAmountPoints / 4;
 
-                if (Vector3.Angle(this.transform.forward, Vector3.up) > 135)
+                if (angle > 135)
                     _amountPoints = _maxAmountPoints / 8;
             }
             else
@@ -170,13 +170,13 @@ public class HouseProps : MyMonoBehaviour
             }
             else
             {
-                if (Vector3.Angle(this.transform.forward, Vector3.up) > 135)
+                if (angle > 135)
                     _amountPoints = _maxAmountPoints;
 
-                if (Vector3.Angle(this.transform.forward, Vector3.up) > 45 && Vector3.Angle(this.transform.forward, Vector3.up) < 135)
+                if (angle > 45 && angle < 135)
                     _amountPoints = _maxAmountPoints / 4;
 
-                if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
+                if (angle < 45)
                     _amountPoints = _maxAmountPoints / 8;
             }
         }
@@ -187,10 +187,12 @@ public class HouseProps : MyMonoBehaviour
 
         if (OnAnyPointsRefresh != null)
             OnAnyPointsRefresh();
-
         //PArticles & points
         SpawnParticles(_amountPoints);
         SpawnUiPoints();
+
+        print("objeto " + _nameObject + " con angulo "+ angle  + " en la room " + _currentRoom + " da " + _amountPoints + " del maximo " + _maxAmountPoints + " que podría dar");
+
         
     }
 
