@@ -1,2 +1,2 @@
-# GGJ2022
-Blockchain play to earn game for the Global Game Jam 2022
+# GLOBAL GAME JAM 2022
+A wanky physics game where you need to order and mess up your house before the time runs out.
