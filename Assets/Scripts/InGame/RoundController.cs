@@ -51,7 +51,7 @@ public class RoundController : MyMonoBehaviour
             }
 
             uiController.rondaText.text = "Round: 2/2";
-            crono.totalTimer = ProjectSettings.countdownRoundTime;
+            crono.totalTimer = ProjectSettings.countdownRoundTime / 3;
             crono.timerIsRunning = true;
             round1 = false;
         }

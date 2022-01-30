@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController : MyMonoBehaviour
 {
     [SerializeField] private float speed = 50f;
     [SerializeField] private float speedRun = 100f;
@@ -29,6 +29,9 @@ public class CharacterController : MonoBehaviour
     //Hip for Cinemachine
     public Transform hipTransform;
 
+    Vector3 lastPos;
+    float time = 10;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -39,6 +42,8 @@ public class CharacterController : MonoBehaviour
 
         if (!photonView.IsMine)
             youTxt.SetActive(false);
+
+        lastPos = hipTransform.transform.position;
     }
 
     
@@ -47,6 +52,28 @@ public class CharacterController : MonoBehaviour
         //Authority
         if (NetworkManager.instance.multiplayerOn && !photonView.IsMine)
             return;
+
+        time -= Time.deltaTime;
+
+        //Reset pos to avoid stuck
+        if(time <= 0)
+        {
+            time = 10;
+            if (Vector3.Distance(lastPos, hipTransform.position) < 2)
+            {
+                if (gameController.singlePlayer)
+                {
+                    hipTransform.transform.position = gameController.spawnPlayer2Round2.transform.position;
+                    return;
+                }
+                if (!networkManager.multiplayerOn || PhotonNetwork.IsMasterClient)
+                    hipTransform.position = gameController.spawnPlayer1Round2.transform.position;
+                else
+                    //Player2
+                    hipTransform.position = gameController.spawnPlayer2Round2.transform.position;
+            }
+            lastPos = hipTransform.position;
+        }
 
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");

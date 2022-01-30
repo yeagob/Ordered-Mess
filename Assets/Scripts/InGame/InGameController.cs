@@ -98,6 +98,7 @@ public class InGameController : MonoBehaviour
     {
         doorPlayer2.SetActive(true);
         doorPlayer1.SetActive(true);
+
         if (singlePlayer)
         {
             player.hipTransform.transform.position = spawnPlayer2Round2.transform.position;
