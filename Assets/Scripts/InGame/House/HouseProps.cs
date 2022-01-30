@@ -127,7 +127,7 @@ public class HouseProps : MyMonoBehaviour
         rb.isKinematic = false;
         transform.parent = null;
         if (throwForce > 0)
-            rb.AddForce(-transform.forward * throwForce, ForceMode.Impulse);
+            rb.AddForce(-InGameController.instance.hip.transform.forward * throwForce, ForceMode.Impulse);
         gameObject.layer = LayerMask.NameToLayer("Default");
 
         //UI Points

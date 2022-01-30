@@ -53,7 +53,7 @@ public class Grab : MonoBehaviour
                 pickupGO.GetComponent<HouseProps>().Release(throwForce);
 
                 //Delay to not pick up again the object while pressing Fire1 and throwing
-                Invoke(nameof(DelayObjectPicked), 0.2f);
+                Invoke(nameof(DelayObjectPicked), 0.4f);
 
                 if (OnThrowEvent != null)
                     OnThrowEvent(pickupGO.GetComponent<HouseProps>());
