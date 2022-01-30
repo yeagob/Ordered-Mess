@@ -67,9 +67,10 @@ public class InGameController : MonoBehaviour
         if (networkManager.multiplayerOn)
         {
             networkManager.OnNetworkStartGame += StartGame;
-            if (PhotonNetwork.IsMasterClient)
+            if (!PhotonNetwork.IsMasterClient)
             {
                 doorPlayer2.SetActive(true);
+                doorPlayer1.SetActive(false);
             }
             else
             {
