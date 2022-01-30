@@ -16,7 +16,7 @@ public class InGameController : MonoBehaviour
     public CinemachineVirtualCamera cinemachine;
     public RoundController roundController;
     public Crono crono;
-    GameObject hip => player.hipTransform.gameObject;
+    internal GameObject hip => player.hipTransform.gameObject;
 
     [Header("Key Objects")]
     public GameObject playerPrefab;
