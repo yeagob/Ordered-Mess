@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.78162044, g: 0.814938, b: 0.74953467, a: 1}
+  m_IndirectSpecularColor: {r: 0.66725564, g: 0.72421765, b: 0.7193833, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -597,6 +597,10 @@ PrefabInstance:
     - target: {fileID: 8333183099058539527, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: sceneViewId
       value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559957443078156807, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8590764414838878604, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: m_TagString
@@ -3893,6 +3897,10 @@ PrefabInstance:
     - target: {fileID: 8333183099058539527, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: sceneViewId
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559957443078156807, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8590764414838878604, guid: adc20f5e629830449bb62aaf81507ffc, type: 3}
       propertyPath: m_TagString
