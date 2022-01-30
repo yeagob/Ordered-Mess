@@ -33,7 +33,7 @@ public class RoundController : MyMonoBehaviour
             //Message
             uiController.mensajeInicioRonda.text = "Now make a mess!";
             StartCoroutine(uiController.ShowTotalRoundPointsText());
-            if (PhotonNetwork.IsConnected)
+            if (networkManager.multiplayerOn)
             {
                 if (PhotonNetwork.IsMasterClient)
                     uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer1 + " points";
@@ -56,7 +56,7 @@ public class RoundController : MyMonoBehaviour
             uiController.mensajeInicioRonda.text = "Game Over";
 
             StartCoroutine(uiController.ShowTotalRoundPointsText());
-            if (PhotonNetwork.IsConnected)
+            if (networkManager.multiplayerOn)
             {
                 if (PhotonNetwork.IsMasterClient)
                     uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer1 + " points";
