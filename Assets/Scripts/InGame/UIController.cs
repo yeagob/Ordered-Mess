@@ -136,4 +136,16 @@ public class UIController : MyMonoBehaviour
     {
         SceneManager.LoadScene("InGame");
     }
+
+    public void RefreshTotalRoundPointsSmallText()
+    {
+        if (!networkManager.multiplayerOn)
+        {
+            otherPlayerObjectsText.gameObject.SetActive(false);
+            otherPlayerNameText.gameObject.SetActive(false);
+        }
+
+        localPlayerObjectsText.text = "" + InGameController.instance.pointFirstRoundPlayer1;
+        otherPlayerObjectsText.text = "" + InGameController.instance.pointFirstRoundPlayer2;
+    }
 }

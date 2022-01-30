@@ -15,6 +15,8 @@ public class RoundController : MyMonoBehaviour
     {
         crono.OnCronoCompleted += CronoCompleted;
         uiController.mensajeInicioRonda.text = "Now sort out the house!";
+
+        uiController.RefreshTotalRoundPointsSmallText();
     }
 
     private void Update()
@@ -33,6 +35,9 @@ public class RoundController : MyMonoBehaviour
             //Message
             uiController.mensajeInicioRonda.text = "Now make a mess!";
             StartCoroutine(uiController.ShowTotalRoundPointsText());
+
+            uiController.RefreshTotalRoundPointsSmallText();
+
             if (networkManager.multiplayerOn)
             {
                 if (PhotonNetwork.IsMasterClient)
