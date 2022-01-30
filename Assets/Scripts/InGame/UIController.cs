@@ -35,10 +35,14 @@ public class UIController : MyMonoBehaviour
 
     [Header("Buttons")]
     public Button exitButton;
+    public Button mainMenuButton;
+    public Button retryButton;
 
     private void Awake()
     {
         exitButton.onClick.AddListener(Exit);
+        mainMenuButton.onClick.AddListener(Exit);
+        retryButton.onClick.AddListener(Retry);
     }
 
 
@@ -119,12 +123,17 @@ public class UIController : MyMonoBehaviour
         mensajeInicioRonda.gameObject.SetActive(true);
         totalRoundPointsText.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(2);
-        //Back to main menu
-        SceneManager.LoadScene(0);
+        //yield return new WaitForSeconds(2);
+        ////Back to main menu
+        //SceneManager.LoadScene(0);
     }
     private void Exit()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private void Retry()
+    {
+        SceneManager.LoadScene("InGame");
     }
 }
