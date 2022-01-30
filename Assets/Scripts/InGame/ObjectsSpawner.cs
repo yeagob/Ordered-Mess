@@ -9,7 +9,7 @@ public class ObjectsSpawner : MyMonoBehaviour
 {
     [SerializeField] HouseProps[] objectList;
     [SerializeField] Vector3 size;
-    [SerializeField] float objectOffser = 0.1f;
+    [SerializeField] float objectOffseT = 0.1f;
     
     // Start is called before the first frame update
     void Awake()
@@ -27,7 +27,7 @@ public class ObjectsSpawner : MyMonoBehaviour
             for (int z = 0; currentPos.z < initPos.z + size.z + size.x; z++)
             {
                 int rnd = Random.Range(0, objectList.Length);
-                currentPos += (objectList[rnd]._baseSize.y + objectOffser) * Vector3.forward;
+                currentPos += (objectList[rnd]._baseSize.y + objectOffseT) * Vector3.forward;
                 biggerX = objectList[rnd]._baseSize.x > biggerX ? objectList[rnd]._baseSize.y : biggerX;
                 GameObject prop = null;
                 if (networkManager.multiplayerOn)
@@ -45,7 +45,7 @@ public class ObjectsSpawner : MyMonoBehaviour
 
             }
 
-            currentPos = new Vector3(currentPos.x + biggerX + objectOffser, transform.position.y, initPos.z);
+            currentPos = new Vector3(currentPos.x + biggerX + objectOffseT, transform.position.y, initPos.z);
         }
     }
 

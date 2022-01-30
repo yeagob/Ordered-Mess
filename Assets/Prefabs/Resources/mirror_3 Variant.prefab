@@ -171,7 +171,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -3733317057897495617}
-  - {fileID: 9158192881272755980}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -191,12 +191,12 @@ MonoBehaviour:
   _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Mirror_03
   _roomType: 020000000300000004000000050000000600000001000000
-  _propType: 0
+  _currentRoom: 0
   _maxAmountPoints: 1000
   _baseSize: {x: 0.25, y: 0.25}
   _objetctPicked: 0
-  _floorObject: 0
-  _wallObject: 1
+  _inRightPlace: 0
+  onlyRound2: 0
   _realiseObject: 0
 --- !u!114 &-3733317057897495617
 MonoBehaviour:
@@ -214,19 +214,3 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &9158192881272755980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7882409129416114703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3

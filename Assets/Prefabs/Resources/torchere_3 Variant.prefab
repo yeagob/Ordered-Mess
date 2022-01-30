@@ -179,22 +179,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6429496, y: 0.4476722, z: 1.4368926}
   m_Center: {x: -0.21045184, y: -0.003113307, z: 0.76568377}
---- !u!114 &-7173631215219514523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348137689234952354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &-6228266883040966917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +198,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -7173631215219514523}
+  - {fileID: 0}
   - {fileID: 2146489642288161865}
   sceneViewId: 0
   InstantiationId: 0
@@ -234,13 +218,13 @@ MonoBehaviour:
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
   _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Lamp_03
-  _roomType: 020000000300000004000000050000000600000000000000
-  _propType: 0
-  _maxAmountPoints: 1000
+  _roomType: 04000000
+  _currentRoom: 0
+  _maxAmountPoints: 3000
   _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
-  _floorObject: 1
-  _wallObject: 0
+  _inRightPlace: 0
+  onlyRound2: 0
   _realiseObject: 0
 --- !u!114 &2146489642288161865
 MonoBehaviour:

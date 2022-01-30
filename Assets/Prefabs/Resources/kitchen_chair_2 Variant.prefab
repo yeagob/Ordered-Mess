@@ -203,7 +203,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 5097287889405578092}
-  - {fileID: 6467767002903292936}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -222,13 +222,13 @@ MonoBehaviour:
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
   _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Chair_03
-  _roomType: 0200000003000000040000000500000006000000
-  _propType: 0
+  _roomType: 0500000004000000
+  _currentRoom: 0
   _maxAmountPoints: 1000
   _baseSize: {x: 1, y: 1}
   _objetctPicked: 0
-  _floorObject: 1
-  _wallObject: 0
+  _inRightPlace: 0
+  onlyRound2: 0
   _realiseObject: 0
 --- !u!114 &5097287889405578092
 MonoBehaviour:
@@ -246,19 +246,3 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &6467767002903292936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369718739929555068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3

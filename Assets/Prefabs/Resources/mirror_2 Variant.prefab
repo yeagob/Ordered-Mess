@@ -167,29 +167,13 @@ MonoBehaviour:
   _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Mirror_02
   _roomType: 020000000300000004000000050000000600000001000000
-  _propType: 0
+  _currentRoom: 0
   _maxAmountPoints: 1000
   _baseSize: {x: 1, y: 0.5}
   _objetctPicked: 0
-  _floorObject: 0
-  _wallObject: 1
+  _inRightPlace: 0
+  onlyRound2: 0
   _realiseObject: 0
---- !u!114 &-2672525811562414959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669165363539302603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &874236436596905550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +209,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -2672525811562414959}
+  - {fileID: 0}
   - {fileID: 874236436596905550}
   sceneViewId: 0
   InstantiationId: 0

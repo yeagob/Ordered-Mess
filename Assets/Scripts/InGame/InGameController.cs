@@ -25,6 +25,8 @@ public class InGameController : MonoBehaviour
     public Transform spawnPlayer2Round2;
 
     [Header("Key Objects")]
+    public GameObject housePlayer2;
+    public GameObject wallHousePlayer2;
     public GameObject doorPlayer1;
     public GameObject doorPlayer2;
 
@@ -64,7 +66,6 @@ public class InGameController : MonoBehaviour
             networkManager.OnNetworkStartGame += StartGame;
             if (PhotonNetwork.IsMasterClient)
             {
-                doorPlayer1.SetActive(false);
                 doorPlayer2.SetActive(true);
             }
             else
@@ -73,8 +74,16 @@ public class InGameController : MonoBehaviour
                 doorPlayer1.SetActive(true);
             }
         }
+        //SINGLE PLAYER
         else
+        {
+            doorPlayer1.SetActive(false);
+            housePlayer2.SetActive(false);
+            wallHousePlayer2.SetActive(true);
+
             StartGame();
+
+        }
 
         //events
         crono.OnCronoCompleted += LoadPointsPlayers;

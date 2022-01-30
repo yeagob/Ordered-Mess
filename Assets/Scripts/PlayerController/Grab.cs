@@ -31,7 +31,7 @@ public class Grab : MonoBehaviour
             {
                 //print("Object released!");
 
-                pickupGO.GetComponent<HouseProps>().Release();
+                pickupGO.GetComponent<HouseProps>().Release(0);
                 pickupGO.GetComponent<Rigidbody>().isKinematic = false;
                 pickupGO.transform.parent = null;
 
@@ -50,11 +50,7 @@ public class Grab : MonoBehaviour
             if (grabbingObject)
             {
                 //print("Object throwed!");
-
-                pickupGO.GetComponent<Rigidbody>().isKinematic = false;
-                pickupGO.GetComponent<HouseProps>().Release();
-                pickupGO.transform.parent = null;
-                pickupGO.GetComponent<Rigidbody>().AddForce(-transform.forward* throwForce, ForceMode.Impulse);
+                pickupGO.GetComponent<HouseProps>().Release(throwForce);
 
                 //Delay to not pick up again the object while pressing Fire1 and throwing
                 Invoke(nameof(DelayObjectPicked), 0.2f);
@@ -67,26 +63,32 @@ public class Grab : MonoBehaviour
         }
     }
 
+    internal void CheckObject(RoomType room)
+    {
+        if (pickupGO != null)
+            pickupGO.GetComponent<HouseProps>().CheckPropsRoom(room);
+    }
+
     //TODO: refactor. To Update
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Pickable")
         {
+
             //Object grabbed!
             if (Input.GetButton("Fire1") && !grabbingObject && !other.gameObject.GetComponent<HouseProps>()._objetctPicked)
             {
               //  print("Object grabbed!");
 
                 pickupGO = other.gameObject;
-                other.GetComponent<Rigidbody>().isKinematic = true;
-                other.transform.position = targetPickup.position;
-                other.transform.parent = targetPickup;
-                pickupGO.GetComponent<HouseProps>().Grab();
 
-                grabbingObject = true;
+                if (pickupGO.GetComponent<HouseProps>().Grab(targetPickup))
+                {
+                    grabbingObject = true;
 
-                if (OnGrabEvent != null)
-                    OnGrabEvent(other.GetComponent<HouseProps>());
+                    if (OnGrabEvent != null)
+                        OnGrabEvent(other.GetComponent<HouseProps>());
+                }
             }
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using Random = UnityEngine.Random;
 
 public class HouseProps : MyMonoBehaviour
 {
@@ -18,8 +19,8 @@ public class HouseProps : MyMonoBehaviour
     [Header("Name")]
     [HideInInspector]public string _nameObject;
     [Header("Enum")]
-    public List<HousePropType> _roomType;
-    /*[HideInInspector]*/public HousePropType _propType;
+    public List<RoomType> _roomType;
+    /*[HideInInspector]*/public RoomType _currentRoom;
     [Header("Points")]
     public int _maxAmountPoints = 1000;
     internal int _amountPoints = 0;
@@ -37,7 +38,9 @@ public class HouseProps : MyMonoBehaviour
 
     [Header("Bools")]
     public  bool  _objetctPicked;
+    bool placed = false;
     [SerializeField]private bool  _inRightPlace;
+    [SerializeField] private bool onlyRound2;
     [HideInInspector] public bool _realiseObject;
     
       
@@ -56,14 +59,13 @@ public class HouseProps : MyMonoBehaviour
     {   
         _amountPoints = 0;
         photonView = GetComponent<PhotonView>();
-        //events
-        Room.OnTriggerExitProp += CheckPropsRoom;
-        OnPointsRefresh += SpawnParticles;
+        
         rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
+        
         print(Input.GetAxis("Mouse ScrollWheel"));
         if (_objetctPicked)
         {
@@ -72,24 +74,23 @@ public class HouseProps : MyMonoBehaviour
 
             //Si el objeto está cogido y le das a la rueda del ratón, lo giras
             if (Input.GetAxis("Mouse ScrollWheel") > 0.1)
-                transform.Rotate(45, 0, 0);
+                transform.Rotate(Random.Range(0, 45), 0, Random.Range(0, 45));
             if (Input.GetAxis("Mouse ScrollWheel") < -0.1)
-                transform.Rotate(-45, 0, 0);
-
-            if (_inRightPlace)
-                uiController.SetGoodColor(true);
+                transform.Rotate(Random.Range(-45,0), 0, Random.Range(-45,0));
         }
 
         //Update points on object stop
-        if (releasedObjectPoints && rb.velocity.magnitude < 0.1f)
+        if (releasedObjectPoints && rb.IsSleeping() && !rb.isKinematic)
         {
             releasedObjectPoints = false;
             
             //Actualizamos los puntos
             UpdatePoints();
+
+            placed = true;
         }
-        //if (rb.velocity.magnitude > 0.1f)
-        //    releasedObjectPoints = true;
+        if (placed && rb.velocity.magnitude > 0.1f)
+            releasedObjectPoints = true;
     }
     private void OnDestroy()
     {
@@ -98,35 +99,54 @@ public class HouseProps : MyMonoBehaviour
 
     #region Methods
 
-    internal void Grab()
+    internal bool Grab(Transform targetPickup)
     {
+        if (onlyRound2 && roundControl.round1)
+            return false;
+
+        rb.isKinematic = true;
+        transform.position = targetPickup.position;
+        transform.parent = targetPickup;
+
         _objetctPicked = true;
         gameObject.layer = LayerMask.NameToLayer("Grabbed");
         uiController.objectNameText.text = _nameObject;
+
+        //CheckPropsRoom(_currentRoom);
+
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
+
+        return true;
     }
 
-    internal void Release()
+    internal void Release(float throwForce)
     {
         _objetctPicked = false;
+
+        //Phisics
+        rb.isKinematic = false;
+        transform.parent = null;
+        if (throwForce > 0)
+            rb.AddForce(-transform.forward * throwForce, ForceMode.Impulse);
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
+        //UI Points
         uiController.objectNameText.text = "";
         uiController.SetGoodColor(false);
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        releasedObjectPoints = true;
+        
+        //Network
         if (networkManager.multiplayerOn)
             photonView.RPC(nameof(RPCPickedTrue), RpcTarget.Others);
-
-        releasedObjectPoints = true;
     }
 
     private void UpdatePoints()
     {
         if (roundControl.round1)
         {
-
-            if (_inRightPlace && _propType != HousePropType.none)
+            if (_inRightPlace)
             {
-
                 if (Vector3.Angle(this.transform.forward, Vector3.up) < 45)
                     _amountPoints = _maxAmountPoints;
 
@@ -144,7 +164,7 @@ public class HouseProps : MyMonoBehaviour
         //ROUND 2
         else
         {
-            if (_inRightPlace && _propType != HousePropType.none)
+            if (_inRightPlace && _currentRoom != RoomType.none)
             {
                 _amountPoints = 0;
             }
@@ -168,7 +188,8 @@ public class HouseProps : MyMonoBehaviour
         if (OnAnyPointsRefresh != null)
             OnAnyPointsRefresh();
 
-
+        //PArticles & points
+        SpawnParticles(_amountPoints);
         SpawnUiPoints();
         
     }
@@ -178,27 +199,41 @@ public class HouseProps : MyMonoBehaviour
         if (instantiatedPoints == null)
             instantiatedPoints = Instantiate(_pointUiPrefab, transform.position, Quaternion.identity);
 
-        instantiatedPoints.transform.position = transform.position + Vector3.up * 5 - Vector3.forward;
+        instantiatedPoints.transform.position = transform.position + Vector3.up * 1 - Vector3.forward * 1;
         instantiatedPoints.transform.forward = Camera.main.transform.forward;
         instantiatedPoints.GetComponentInChildren<Text>().text = _amountPoints.ToString();
+        instantiatedPoints.GetComponentInChildren<Text>().color = new Color(_amountPoints/ _maxAmountPoints, _amountPoints / _maxAmountPoints,0);
         instantiatedPoints.GetComponent<Animator>().Play("CanvasPanelPointAnim");
     }
 
-    void CheckPropsRoom()
+    internal void CheckPropsRoom( RoomType room)
     {
-        _inRightPlace = false;
-        uiController.SetGoodColor(false);
-        if (_roomType.Contains(_propType))
+        _currentRoom = room;
+            
+        if (_roomType.Contains(_currentRoom))
         {
            _inRightPlace = true;
+            if (_objetctPicked)
+                uiController.SetGoodColor(true);
+        }
+        else
+        {
+           _inRightPlace = false;
+            if (_objetctPicked)
+            uiController.SetGoodColor(false);
         }
     }
 
     private void SpawnParticles(int point)
     {
-        if (point > 0)
+        if (_inRightPlace)
         {
             instantiatedParticle = Instantiate(_particlePrefab, transform.position, Quaternion.identity);
+
+            //Desactive máx poitns particles.
+            if (point != _maxAmountPoints)
+                instantiatedParticle.transform.GetChild(1).gameObject.SetActive(false);
+
             ColorParticle(point);
         }
     }

@@ -9,7 +9,7 @@
         public int loseCount = 0;
         public int drawCount = 0;
         public int executionNumber = 0;
-        internal float playerSpeed = 50;
-        internal float playerSpeedRun = 100;
+        internal float playerSpeed = 200;
+        internal float playerSpeedRun = 500;
         internal float throwObjectsForce = 30;
     }

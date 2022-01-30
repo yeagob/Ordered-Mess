@@ -16,6 +16,8 @@ public class CharacterController : MonoBehaviour
 
     [SerializeField] private Animator targetAnimator;
 
+    float horizontal = 0;
+    float vertical = 0;
     private bool walk = false;
 
     private PhotonView photonView;
@@ -39,17 +41,18 @@ public class CharacterController : MonoBehaviour
             youTxt.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
         //Authority
         if (NetworkManager.instance.multiplayerOn && !photonView.IsMine)
             return;
 
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxisRaw("Horizontal");
+        vertical = Input.GetAxisRaw("Vertical");
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
 
         if (direction.magnitude >= 0.1f)
         {
@@ -58,7 +61,7 @@ public class CharacterController : MonoBehaviour
             {
                 this.speed = speedRun;
 
-                if(!dustParticle.isPlaying)
+                if (!dustParticle.isPlaying)
                     dustParticle.Play();
             }
             else
@@ -68,6 +71,20 @@ public class CharacterController : MonoBehaviour
                 if (dustParticle.isPlaying)
                     dustParticle.Stop();
             }
+        }
+    }
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        //Authority
+        if (NetworkManager.instance.multiplayerOn && !photonView.IsMine)
+            return;
+
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (direction.magnitude >= 0.1f)
+        {
+            
 
             float targetAngle = Mathf.Atan2(direction.z, direction.x) * Mathf.Rad2Deg;
 

@@ -5,7 +5,7 @@ public enum Scenes
     InGame,
 
 }
-public enum HousePropType
+public enum RoomType
 {
     none,
     Hallway,

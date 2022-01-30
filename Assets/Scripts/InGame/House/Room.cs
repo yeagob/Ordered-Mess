@@ -9,7 +9,7 @@ public class Room : MyMonoBehaviour
     
     #region Attributes
     [Header("Enum")]
-    public HousePropType _roomType;
+    public RoomType _roomType;
     public List<GameObject> roomHouseProps = new List<GameObject>();
     
 
@@ -30,7 +30,7 @@ public class Room : MyMonoBehaviour
         {
             // print(_roomType);
             //Object name
-            if (_roomType != HousePropType.Center)
+            if (_roomType != RoomType.Center)
                uiController.roomNameText.text = _roomType.ToString();
             else
                uiController.roomNameText.text = "";
@@ -41,9 +41,12 @@ public class Room : MyMonoBehaviour
     {
         if (other.CompareTag("Pickable") && other.GetComponent<HouseProps>() != null && !other.GetComponent<HouseProps>()._realiseObject)
         {
-            roomHouseProps.Remove(other.gameObject);
+            //Check rigth room
+            other.GetComponent<HouseProps>().CheckPropsRoom(_roomType);
+
+            roomHouseProps.Add(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = true;
-            if (_roomType == HousePropType.Center)
+            if (_roomType == RoomType.Center)
             {
                 int auxObjetosActuales = uiController.objetosTotales;
                 auxObjetosActuales++;
@@ -56,7 +59,9 @@ public class Room : MyMonoBehaviour
             }
         }
 
-      
+        if (other.CompareTag("Player"))
+            other.GetComponentInChildren<Grab>().CheckObject(_roomType);
+
 
     }
 
@@ -64,11 +69,10 @@ public class Room : MyMonoBehaviour
     {
         if (other.CompareTag("Pickable") && other.GetComponent<HouseProps>() != null && !other.GetComponent<HouseProps>()._objetctPicked)
         {
-            roomHouseProps.Add(other.gameObject);
+            roomHouseProps.Remove(other.gameObject);
             other.GetComponent<HouseProps>()._realiseObject = false;
-            other.GetComponent<HouseProps>()._propType = _roomType;
 
-            if (_roomType == HousePropType.Center)
+            if (_roomType == RoomType.Center)
             {
                 int auxObjetosActuales = uiController.objetosTotales;
                 auxObjetosActuales--;

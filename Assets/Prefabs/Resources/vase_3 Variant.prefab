@@ -127,22 +127,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.28430647, y: 0.2367521, z: 0.61370116}
   m_Center: {x: -0.012198385, y: -0.0013429985, z: 0.26018095}
---- !u!114 &-8369663515334647390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6602463860092307913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &-5469487029620928905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,11 +142,13 @@ MonoBehaviour:
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
   _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Vase_01
-  _roomType: 0200000003000000040000000500000006000000
-  _propType: 0
-  _maxAmountPoints: 1000
+  _roomType: 03000000
+  _currentRoom: 0
+  _maxAmountPoints: 2000
   _baseSize: {x: 0.1, y: 0.2}
   _objetctPicked: 0
+  _inRightPlace: 0
+  onlyRound2: 0
   _realiseObject: 0
 --- !u!114 &3807806249875363369
 MonoBehaviour:
@@ -199,7 +185,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -8369663515334647390}
+  - {fileID: 0}
   - {fileID: 3807806249875363369}
   sceneViewId: 0
   InstantiationId: 0

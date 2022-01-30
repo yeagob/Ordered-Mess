@@ -183,22 +183,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6202483, y: 0.6564755, z: 0.8903765}
   m_Center: {x: -0.004381895, y: -0.004855454, z: 0.4343094}
---- !u!114 &-9097867257327405704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7394017467520550696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &-6100623245838381817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,13 +214,13 @@ MonoBehaviour:
   _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
   _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
   _nameObject: Chair_01
-  _roomType: 0200000003000000040000000500000006000000
-  _propType: 0
+  _roomType: 0500000004000000
+  _currentRoom: 0
   _maxAmountPoints: 1000
   _baseSize: {x: 1, y: 1}
   _objetctPicked: 0
-  _floorObject: 1
-  _wallObject: 0
+  _inRightPlace: 0
+  onlyRound2: 0
   _realiseObject: 0
 --- !u!114 &8377428751279008120
 MonoBehaviour:
@@ -257,7 +241,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -9097867257327405704}
+  - {fileID: 0}
   - {fileID: -6100623245838381817}
   sceneViewId: 0
   InstantiationId: 0

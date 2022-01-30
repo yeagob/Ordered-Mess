@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 2822991017860986399}
   - component: {fileID: 5204047957421568274}
   - component: {fileID: 5003227558135141960}
+  - component: {fileID: 8555515156731257610}
   m_Layer: 0
   m_Name: Pasillo
   m_TagString: Untagged
@@ -149,6 +150,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 1
   roomHouseProps: []
+--- !u!54 &8555515156731257610
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858638126654797148}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4049180710797791355
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +179,7 @@ GameObject:
   - component: {fileID: 564134690914554942}
   - component: {fileID: 177421776876009003}
   - component: {fileID: 2612848400768650580}
+  - component: {fileID: 2236939108346959475}
   m_Layer: 0
   m_Name: Comedor
   m_TagString: Untagged
@@ -261,6 +279,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 3
   roomHouseProps: []
+--- !u!54 &2236939108346959475
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4049180710797791355}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4269742894142732315
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,6 +308,7 @@ GameObject:
   - component: {fileID: 3671926350041862234}
   - component: {fileID: 4245404373947667574}
   - component: {fileID: 7857627334068161814}
+  - component: {fileID: 5568507548712304918}
   m_Layer: 0
   m_Name: Lavabo
   m_TagString: Untagged
@@ -373,6 +408,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 2
   roomHouseProps: []
+--- !u!54 &5568507548712304918
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269742894142732315}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4491477267327513918
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +437,7 @@ GameObject:
   - component: {fileID: 2582770594819588857}
   - component: {fileID: 7287375815157125832}
   - component: {fileID: 773826088794044702}
+  - component: {fileID: 5503262178345560039}
   m_Layer: 0
   m_Name: Habitacion_01
   m_TagString: Untagged
@@ -485,6 +537,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 4
   roomHouseProps: []
+--- !u!54 &5503262178345560039
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491477267327513918}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &4510709469475911572
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +650,7 @@ GameObject:
   - component: {fileID: 483836117000314298}
   - component: {fileID: 4030087002084484839}
   - component: {fileID: 2080109829103334898}
+  - component: {fileID: 294424655117619158}
   m_Layer: 0
   m_Name: Habitacion_02
   m_TagString: Untagged
@@ -681,6 +750,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 2
   roomHouseProps: []
+--- !u!54 &294424655117619158
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6597336582128137735}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6603546999292464115
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +779,7 @@ GameObject:
   - component: {fileID: 6550517154753739084}
   - component: {fileID: 4345757399467832488}
   - component: {fileID: 7050669234763759550}
+  - component: {fileID: 3824014853832025270}
   m_Layer: 0
   m_Name: Cocina
   m_TagString: Untagged
@@ -793,6 +879,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _roomType: 5
   roomHouseProps: []
+--- !u!54 &3824014853832025270
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603546999292464115}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &8559957443078156807
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,7 +940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8fc847fdd92983f43b5183ed20e269a3, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8fc847fdd92983f43b5183ed20e269a3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -957,7 +1059,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.357105, y: 16.990938, z: 58.668133}
   m_Center: {x: -0.000006664714, y: 0.0000035041535, z: 29.210209}
---- !u!114 &3855193215277346008
+--- !u!114 &708688468448980972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -966,26 +1068,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 318403326317149841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
---- !u!114 &5531627961598353943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318403326317149841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &6275592856039939950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,7 +1101,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 5531627961598353943}
   - {fileID: 7479291788530684573}
   sceneViewId: 0
   InstantiationId: 0
@@ -1039,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5c5d675157a1a8c4bb3a499600b460f8, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5c5d675157a1a8c4bb3a499600b460f8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1173,19 +1268,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2809110589105510621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071861259976043132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
 --- !u!114 &3415948179713002264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,7 +1284,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &4645863658305617714
+--- !u!114 &4826563169544047164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1211,13 +1293,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071861259976043132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &8867579380231319379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,7 +1327,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3415948179713002264}
-  - {fileID: 4645863658305617714}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -2684,7 +2773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 47af50246352ed14da4ade618d736175, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: 47af50246352ed14da4ade618d736175, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3038,22 +3127,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6898627, y: 1.1033467, z: 1.1584295}
   m_Center: {x: 0.15506864, y: 0.005766928, z: 0.45728165}
---- !u!114 &1687324299104828713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2214065195429594829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &3147748638260156668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3074,11 +3147,11 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7675309571733501348}
-  - {fileID: 1687324299104828713}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &4964207630372103284
+--- !u!114 &4358735039046975698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3087,10 +3160,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2214065195429594829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &7675309571733501348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3133,7 +3216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 2c528509df862ef449544165d18b2dbf, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 2c528509df862ef449544165d18b2dbf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3250,6 +3333,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2071407885835042203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2972316790479328712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &4156139287243464227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3266,35 +3372,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &4908813845639313916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2972316790479328712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
---- !u!114 &6170586515382647108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2972316790479328712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &8809415832158917086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3315,7 +3392,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4156139287243464227}
-  - {fileID: 6170586515382647108}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -3337,7 +3413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3555,22 +3631,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5753122, y: 0.44765663, z: 0.7688076}
   m_Center: {x: -0.01439172, y: -0.015132964, z: 0.4859132}
---- !u!114 &2268694593875065728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4308860431258637953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &3257760449869906300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3609,7 +3669,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &6257753182038609650
+--- !u!114 &6463863256587263552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3618,10 +3678,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4308860431258637953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!4 &4308860431259126433 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
@@ -3640,7 +3710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3858,22 +3928,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.59277683, y: 0.510026, z: 1.0303026}
   m_Center: {x: 0.008441612, y: 0.028799415, z: 0.31346983}
---- !u!114 &392274933538068826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5040283938446807459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &3110209446980027970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3890,7 +3944,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &3856954440825562837
+--- !u!114 &3159458885948139258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3899,10 +3953,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5040283938446807459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &5347555803062556634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3943,7 +4007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4183,35 +4247,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &147074973650048070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5125958799119115425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
---- !u!114 &962147226765033108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5125958799119115425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &1448676690979001733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4228,6 +4263,29 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &8575400909843367403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125958799119115425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!4 &5125958799119612033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
@@ -4274,7 +4332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4536,22 +4594,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.73671, y: 2.307773, z: 0.9166712}
   m_Center: {x: 0.019559026, y: -0.07567477, z: 0.4238738}
---- !u!114 &2273014500241445790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5279701431293114391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &2534279848985471716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,7 +4632,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &6234724567382208132
+--- !u!114 &8905608083169290266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4599,10 +4641,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5279701431293114391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!4 &5279701431293535287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
@@ -4649,7 +4701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4995,7 +5047,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.745882, y: 0.99984854, z: 0.64436626}
   m_Center: {x: 0.01044476, y: -0.061710924, z: 0.33515808}
---- !u!114 &4865427354261702440
+--- !u!114 &3652088363822703438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5004,13 +5056,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5699879818218238346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &4947612312185220214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5046,24 +5105,11 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 0}
   - {fileID: 4947612312185220214}
-  - {fileID: 4865427354261702440}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &8196717270983409326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5699879818218238346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
 --- !u!4 &5699879818218663338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: 8cef4c90a64b6564ca61184c68b8d442, type: 3}
@@ -5082,7 +5128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 69876b662dbfff945b3239cdac3b1811, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 69876b662dbfff945b3239cdac3b1811, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5440,19 +5486,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &3808019721760872821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5797224505437572270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
 --- !u!114 &5124507843796392645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5475,7 +5508,7 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &5938539497025590851
+--- !u!114 &5431806494815917896
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5484,13 +5517,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5797224505437572270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!4 &5797224505437606030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 69876b662dbfff945b3239cdac3b1811, type: 3}
@@ -5529,7 +5569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: f47c3332cc1e27e429e62f14a27f814d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: f47c3332cc1e27e429e62f14a27f814d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5796,7 +5836,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &755912055265228929
+--- !u!114 &622159025405835276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5805,26 +5845,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5977737061325007242}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &1725543353865863622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5977737061325007242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &8327671127006439480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5845,7 +5879,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 391461985579587838}
-  - {fileID: 755912055265228929}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -5866,7 +5900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: bcf7f5659c394f04f947cb579e955ca3, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: bcf7f5659c394f04f947cb579e955ca3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6048,39 +6082,10 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 8193655253025866713}
-  - {fileID: 3713699993233879470}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2692963143338306112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6388274283285143120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
---- !u!114 &3713699993233879470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6388274283285143120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &8193655253025866713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6097,6 +6102,29 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &8493322465479158765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6388274283285143120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!4 &6388274283285496432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: bcf7f5659c394f04f947cb579e955ca3, type: 3}
@@ -6143,7 +6171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6405,19 +6433,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.6471277, y: 2.7102532, z: 0.966101}
   m_Center: {x: 0.04911661, y: -0.2681706, z: 0.4824085}
---- !u!114 &544014628708976390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6667304768006461294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
 --- !u!114 &600722871841916179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6438,26 +6453,10 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3999228379637571745}
-  - {fileID: 2905404547920054035}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &2905404547920054035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6667304768006461294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!114 &3999228379637571745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6474,6 +6473,29 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &5488088147510288478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667304768006461294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!4 &6667304768006556494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
@@ -6578,7 +6600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5c5d675157a1a8c4bb3a499600b460f8, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5c5d675157a1a8c4bb3a499600b460f8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6728,7 +6750,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &5336764571694432172
+--- !u!114 &3646525230775766887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6737,26 +6759,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8119336435721290882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
---- !u!114 &8920673260273935897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8119336435721290882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &9006508738497381237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6777,7 +6793,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 2832154644866868251}
-  - {fileID: 8920673260273935897}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -6822,7 +6838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: b4bf5e3a00974a94ea1549814fc16ebf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7089,6 +7105,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7830458, y: 2.1243267, z: 0.92512745}
   m_Center: {x: 0.00771752, y: -0.027653456, z: 0.45463893}
+--- !u!114 &1418375424522815864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164869339705897967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &1716981190779214815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7109,39 +7148,10 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6657712431540833276}
-  - {fileID: 3616198303978822666}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &3616198303978822666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164869339705897967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &5707753333516654470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8164869339705897967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
 --- !u!114 &6657712431540833276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7171,7 +7181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7215,7 +7225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 66e6284526c4a2645a28827f82a71cfd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7405,7 +7415,7 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &3102689485288101961
+--- !u!114 &2815721928339624301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7414,26 +7424,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8264073245353338272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
---- !u!114 &4903772668212886519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8264073245353338272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
   _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &5747902625124406850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7454,7 +7458,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 547116853997018996}
-  - {fileID: 3102689485288101961}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -7476,7 +7480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 969e14f1112395b4b816c3c2606022bf, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 969e14f1112395b4b816c3c2606022bf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7590,7 +7594,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15.357086, y: 31.151978, z: 44.77104}
   m_Center: {x: -0.000011392286, y: -0.0000014305139, z: 22.261665}
---- !u!114 &2926834187626783635
+--- !u!114 &442446028084483784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7599,13 +7603,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8590764414838878604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &4458897754833809844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7622,19 +7633,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &5483320511047208656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590764414838878604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
 --- !u!114 &8333183099058539527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7655,7 +7653,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4458897754833809844}
-  - {fileID: 2926834187626783635}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -7681,7 +7679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: bcf7f5659c394f04f947cb579e955ca3, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Pickable
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: bcf7f5659c394f04f947cb579e955ca3, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7843,6 +7841,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.57422596, y: 0.48418736, z: 0.3883772}
   m_Center: {x: -0.115398675, y: 0.050873607, z: 1.9172664}
+--- !u!114 &212294998692286237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8829189542147357524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f3c440a89364249a278630eefd6c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointUiPrefab: {fileID: 2530721829465337835, guid: 7849e4007cb3809488836b8940cf692d, type: 3}
+  _particlePrefab: {fileID: 4025912568757194794, guid: 2719ebc9d859000449ed7bbe92f8b17b, type: 3}
+  _nameObject: 
+  _roomType: 02000000
+  _currentRoom: 2
+  _maxAmountPoints: 2000
+  _baseSize: {x: 0, y: 0}
+  _objetctPicked: 0
+  _inRightPlace: 1
+  onlyRound2: 1
+  _realiseObject: 0
 --- !u!114 &3120076521185358763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7879,39 +7900,10 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3120076521185358763}
-  - {fileID: 8431194255070269326}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7847084554519896613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8829189542147357524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29f3ca947f7aab9469a7a09697016b6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objetctPicked: 0
---- !u!114 &8431194255070269326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8829189542147357524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 0
-  m_TeleportEnabled: 0
-  m_TeleportIfDistanceGreaterThan: 3
 --- !u!4 &8829189542147712884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: bcf7f5659c394f04f947cb579e955ca3, type: 3}
