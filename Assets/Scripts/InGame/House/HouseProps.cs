@@ -158,7 +158,10 @@ public class HouseProps : MyMonoBehaviour
             }
             else
             {
-                _amountPoints = 0;
+                if (angle < 45)
+                    _amountPoints = _maxAmountPoints/10;
+                else
+                    _amountPoints = 0;
             }
         }
         //ROUND 2
@@ -166,7 +169,10 @@ public class HouseProps : MyMonoBehaviour
         {
             if (_inRightPlace && _currentRoom != RoomType.none)
             {
-                _amountPoints = 0;
+                if (angle > 135)
+                        _amountPoints = _maxAmountPoints / 10;
+                else
+                    _amountPoints = 0;
             }
             else
             {

@@ -71,6 +71,30 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.021048993
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.021048993
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.021049008
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.021048997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.021048997
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.021048997
+      objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: caa8fd4c881e43744b8164d904df19c6, type: 3}
       propertyPath: m_LightmapIndex
       value: 1
@@ -135,8 +159,8 @@ Rigidbody:
   m_GameObject: {fileID: 3852110463373791804}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -153,8 +177,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.24517441, y: 0.26015037, z: 0.6854684}
-  m_Center: {x: 0.003499031, y: -0.012382232, z: 0.3165695}
+  m_Size: {x: 0.24517441, y: 0.3, z: 1}
+  m_Center: {x: 0.003499031, y: 0, z: 0.3165695}
 --- !u!114 &-8757076440680294719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +215,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -8757076440680294719}
-  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -212,7 +235,7 @@ MonoBehaviour:
   _nameObject: VaseFlowers_01
   _roomType: 03000000
   _currentRoom: 0
-  _maxAmountPoints: 3000
+  _maxAmountPoints: 1500
   _baseSize: {x: 0.1, y: 0.3}
   _objetctPicked: 0
   _inRightPlace: 0

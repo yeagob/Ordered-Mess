@@ -2,5 +2,5 @@
 public class ProjectSettings 
 {
     internal static float countdownAfterLeaveMatch;
-    internal static int countdownRoundTime = 29;
+    internal static int countdownRoundTime = 130;
 }

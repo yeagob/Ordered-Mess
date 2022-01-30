@@ -103,8 +103,8 @@ Rigidbody:
   m_GameObject: {fileID: 4549044121050985769}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 1
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   _nameObject: Vase_02
   _roomType: 03000000
   _currentRoom: 0
-  _maxAmountPoints: 2000
+  _maxAmountPoints: 1000
   _baseSize: {x: 0.1, y: 0.1}
   _objetctPicked: 0
   _inRightPlace: 0
@@ -166,7 +166,6 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: -960936998972978678}
-  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
