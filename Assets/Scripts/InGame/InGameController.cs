@@ -86,7 +86,7 @@ public class InGameController : MonoBehaviour
         }
 
         //events
-        crono.OnCronoCompleted += LoadPointsPlayers;
+        crono.OnCronoCompleted += CalculatePointsPlayers;
         crono.OnCronoCompleted += ChangePosPlayers;
     }
 
@@ -136,7 +136,7 @@ public class InGameController : MonoBehaviour
 
     }
 
-    public void LoadPointsPlayers()
+    public void CalculatePointsPlayers()
     {
         
         if (roundController.round1)
@@ -146,57 +146,75 @@ public class InGameController : MonoBehaviour
                 foreach (GameObject prop in room.roomHouseProps) 
                 {
                       calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
-                      pointFirstRoundPlayer1 = calculatePointPlayer1;
                 }
+                pointFirstRoundPlayer1 = calculatePointPlayer1;
             }        
             print("Player_1 total points" + calculatePointPlayer1);
-            foreach(Room room in roomsPlayer2)
+            if (!singlePlayer)
             {
-                foreach (GameObject prop in room.roomHouseProps) 
-                { 
-                      calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
-                      pointFirstRoundPlayer2 = calculatePointPlayer2;
+                foreach(Room room in roomsPlayer2)
+                {
+                    foreach (GameObject prop in room.roomHouseProps) 
+                    { 
+                          calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
+                    }
+                    pointFirstRoundPlayer2 = calculatePointPlayer2;
                 }
+                print("Player_2 total points" + calculatePointPlayer2);
             }
-            print("Player_2 total points" + calculatePointPlayer2);
-        
-            if (pointFirstRoundPlayer1 != 0 && pointFirstRoundPlayer2 != 0)
-            {
-           
-                calculatePointPlayer1 = pointFirstRoundPlayer1 - calculatePointPlayer1;
-                calculatePointPlayer2 = pointFirstRoundPlayer2 - calculatePointPlayer2;
-            }
-
         }
         else
         {
-            foreach (Room room in roomsPlayer2)
+            if (singlePlayer)
             {
-                foreach (GameObject prop in room.roomHouseProps)
+                foreach (Room room in roomsPlayer1)
                 {
-                    calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
+                    foreach (GameObject prop in room.roomHouseProps)
+                    {
+                        calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
+                    }
                     pointSecondRoundPlayer1 = calculatePointPlayer1;
                 }
+                print("Player_1 total points" + calculatePointPlayer1);
             }
-            print("Player_1 total points" + calculatePointPlayer1);
-            foreach (Room room in roomsPlayer1)
+            //Multiplayer
+            else
             {
-                foreach (GameObject prop in room.roomHouseProps)
+
+                foreach (Room room in roomsPlayer2)
                 {
-                    calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
+                    foreach (GameObject prop in room.roomHouseProps)
+                    {
+                        calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
+                    }
+                    pointSecondRoundPlayer1 = calculatePointPlayer1;
+                }
+                print("Player_1 total points" + calculatePointPlayer1);
+                foreach (Room room in roomsPlayer1)
+                {
+                    foreach (GameObject prop in room.roomHouseProps)
+                    {
+                        calculatePointPlayer2 += prop.GetComponent<HouseProps>()._amountPoints;
+                    }
                     pointSecondRoundPlayer2 = calculatePointPlayer2;
                 }
+                print("Player_2 total points" + calculatePointPlayer2);
+                
+                calculatePointPlayer2 = pointFirstRoundPlayer2 + pointSecondRoundPlayer2;
             }
-            print("Player_2 total points" + calculatePointPlayer2);
 
             //Final Result!!
             calculatePointPlayer1 = pointFirstRoundPlayer1 + pointSecondRoundPlayer1;
-            calculatePointPlayer2 = pointFirstRoundPlayer2 + pointSecondRoundPlayer2;
 
-            if (calculatePointPlayer1 > calculatePointPlayer2)
-                uIController.playerWonText.text = "Player 1 WIN";
+            if (!singlePlayer)
+            {
+                if (calculatePointPlayer1 > calculatePointPlayer2)
+                    uIController.playerWonText.text = "Player 1 WIN";
+                else
+                    uIController.playerWonText.text = "Player 2 WIN";
+            }
             else
-                uIController.playerWonText.text = "Player 2 WIN";
+                    uIController.playerWonText.text = "GOOD GAME";
         }
     }
 }
