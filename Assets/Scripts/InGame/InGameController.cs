@@ -54,6 +54,8 @@ public class InGameController : MonoBehaviour
 
     public event Action OnStartGame;
 
+    public event Action OnStartTutorial;
+
     // Start is called before the first frame update
     void Awake()
     {

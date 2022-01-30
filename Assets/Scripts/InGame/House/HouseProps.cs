@@ -128,7 +128,7 @@ public class HouseProps : MyMonoBehaviour
         transform.parent = null;
         if (throwForce > 0)
             rb.AddForce(-InGameController.instance.hip.transform.forward * throwForce, ForceMode.Impulse);
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Furniture");
 
         //UI Points
         uiController.objectNameText.text = "";

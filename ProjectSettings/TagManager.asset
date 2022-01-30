@@ -18,9 +18,9 @@ TagManager:
   - Player2
   - House1
   - House2
-  - 
-  - 
-  - 
+  - Furniture
+  - NonPlayerCollision
+  - NonFornitureCollision
   - 
   - 
   - 

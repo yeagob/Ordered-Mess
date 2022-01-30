@@ -48,6 +48,17 @@ public class ObjectsSpawner : MyMonoBehaviour
             currentPos = new Vector3(currentPos.x + biggerX + objectOffseT, transform.position.y, initPos.z);
         }
     }
+    public void SpawnTutorialObject()
+    {
+        GameObject prop = null;
+
+        prop = Instantiate(objectList[0].gameObject, new Vector3(0, 0.5f, 0), objectList[0].transform.rotation);
+
+        prop = null;
+
+        prop = Instantiate(objectList[1].gameObject, new Vector3(-9.758f, 0.1f, 4.875f), objectList[1].transform.rotation);
+
+    }
 
     private void OnDrawGizmos()
     {
