@@ -138,18 +138,21 @@ public class InGameController : MonoBehaviour
 
     public void CalculatePointsPlayers()
     {
-        
+        //Round 1
         if (roundController.round1)
         {
             foreach(Room room in roomsPlayer1)
             {
                 foreach (GameObject prop in room.roomHouseProps) 
                 {
+                    if (!prop.GetComponent<HouseProps>().onlyRound2)
                       calculatePointPlayer1 += prop.GetComponent<HouseProps>()._amountPoints;
                 }
                 pointFirstRoundPlayer1 = calculatePointPlayer1;
             }        
             print("Player_1 total points" + calculatePointPlayer1);
+            
+            //Multiplayer
             if (!singlePlayer)
             {
                 foreach(Room room in roomsPlayer2)
@@ -163,6 +166,8 @@ public class InGameController : MonoBehaviour
                 print("Player_2 total points" + calculatePointPlayer2);
             }
         }
+        //Round 2
+
         else
         {
             if (singlePlayer)

@@ -40,7 +40,7 @@ public class HouseProps : MyMonoBehaviour
     public  bool  _objetctPicked;
     bool placed = false;
     [SerializeField]private bool  _inRightPlace;
-    [SerializeField] private bool onlyRound2;
+    public bool onlyRound2;
     [HideInInspector] public bool _realiseObject;
     
       
