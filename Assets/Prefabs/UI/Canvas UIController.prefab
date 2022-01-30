@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Local Player
+  m_text: 'Your points:
 
 '
   m_isRightToLeft: 0
@@ -2220,9 +2220,9 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.21125, y: 0.22600001}
-  m_AnchoredPosition: {x: -0.7055664, y: -1.0200195}
-  m_SizeDelta: {x: -1.4110718, y: 53.73371}
+  m_AnchorMax: {x: 0.20625001, y: 0.14666668}
+  m_AnchoredPosition: {x: 0.08441162, y: -2.6054993}
+  m_SizeDelta: {x: 0.16880012, y: 2.0335007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8984381070553296966
 CanvasRenderer:
@@ -2523,7 +2523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.030000001, y: 0.135}
   m_AnchorMax: {x: 1, y: 0.5835664}
-  m_AnchoredPosition: {x: 19, y: -2}
+  m_AnchoredPosition: {x: 19, y: -1.9999943}
   m_SizeDelta: {x: 38, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3973013113069308120
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rival Player
+  m_text: 'Other points:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11d4b7e0bb060ea42b15886e7f596b71, type: 2}
   m_sharedMaterial: {fileID: -4381233474794799208, guid: 11d4b7e0bb060ea42b15886e7f596b71, type: 2}
