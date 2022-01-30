@@ -42,37 +42,37 @@ public class Tutorial : MonoBehaviour
         {
             case 1:
 
-                tutorialLabel.text = "First,use W A S D and fo to the superior wal";
+                tutorialLabel.text = "Use W A S D and reach the north wall";
 
                 break;
             case 2:
 
-                tutorialLabel.text = "Try to run to the other side of the yard using Shift";
+                tutorialLabel.text = "Try running to the other side of the yard using Shift";
 
                 break;
             case 3:
 
-                tutorialLabel.text = "Grab the object using left click and take it to the Main Room";
+                tutorialLabel.text = "Grab the object holidng left click and take it to the Main Room";
                 puerta.SetActive(false);
                 _ObjectSpawner.SpawnTutorialObject();
 
                 break;
             case 4:
 
-                tutorialLabel.text = "Rotate the chair with the mouse wheel and release the click to drop it";
+                tutorialLabel.text = "You can rotate the chair with the mouse wheel and leave it realeasing the Left Click";
 
                 break;
             case 5:
 
-                StartCoroutine("waitOneSecond");
-                tutorialLabel.text = "The number floating is the ammount of points you will get at the end of the round.";
+                StartCoroutine("waitPhase5");
+                tutorialLabel.text = "When the object stop moving the points will appear on the top of it";
 
                 break;
 
             case 6:
 
-                StartCoroutine("waitOneSecond");
-                tutorialLabel.text = "The ammount depends of the position of the chair. Now it's time to make some chaos";
+                StartCoroutine("waitPhase6");
+                tutorialLabel.text = "The ammount depends on how the object is placed. Now it's time to make some chaos";
 
                 break;
 
@@ -95,7 +95,19 @@ public class Tutorial : MonoBehaviour
 
     }
 
-    IEnumerator waitOneSecond()
+    IEnumerator waitPhase5()
+    {
+
+        Debug.Log("Entro Corutina");
+        yield return new WaitForSeconds(4);
+
+        Debug.Log("Salgo Coruitna");
+
+        GoNextPhase();
+
+    }
+
+    IEnumerator waitPhase6()
     {
 
         Debug.Log("Entro Corutina");
@@ -106,7 +118,5 @@ public class Tutorial : MonoBehaviour
         GoNextPhase();
 
     }
-
-
 
 }
