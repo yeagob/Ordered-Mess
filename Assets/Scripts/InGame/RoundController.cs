@@ -33,10 +33,17 @@ public class RoundController : MyMonoBehaviour
             //Message
             uiController.mensajeInicioRonda.text = "Now make a mess!";
             StartCoroutine(uiController.ShowTotalRoundPointsText());
-            if (PhotonNetwork.IsMasterClient)
-                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer1 + " points";
+            if (PhotonNetwork.IsConnected)
+            {
+                if (PhotonNetwork.IsMasterClient)
+                    uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer1 + " points";
+                else
+                    uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer2 + " points";
+            }
             else
-                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer2 + " points";
+            {
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.pointFirstRoundPlayer1 + " points";
+            }
 
             uiController.rondaText.text = "Round: 2/2";
             crono.totalTimer = ProjectSettings.countdownRoundTime;
@@ -49,10 +56,17 @@ public class RoundController : MyMonoBehaviour
             uiController.mensajeInicioRonda.text = "Game Over";
 
             StartCoroutine(uiController.ShowTotalRoundPointsText());
-            if (PhotonNetwork.IsMasterClient)
-                uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer1 + " points";
+            if (PhotonNetwork.IsConnected)
+            {
+                if (PhotonNetwork.IsMasterClient)
+                    uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer1 + " points";
+                else
+                    uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer2 + " points";
+            }
             else
-                uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer2 + " points";
+            {
+                uiController.totalRoundPointsText.text = "" + InGameController.instance.calculatePointPlayer1 + " points";
+            }
 
             StartCoroutine(uiController.ShowGameOverPanel());
 

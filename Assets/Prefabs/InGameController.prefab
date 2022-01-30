@@ -628,7 +628,7 @@ MonoBehaviour:
   observableSearch: 0
   ObservedComponents:
   - {fileID: 0}
-  sceneViewId: 2
+  sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &1557133199276074999
@@ -887,7 +887,6 @@ MonoBehaviour:
   cinemachine: {fileID: 1656316327}
   roundController: {fileID: 160583511}
   crono: {fileID: 0}
-  hip: {fileID: 0}
   playerPrefab: {fileID: 4480247331716954370, guid: 4926735e0c3ff9b46a82e32e8d6e566b, type: 3}
   spawnPlayer1: {fileID: 3957107412924111105}
   spawnPlayer1Round2: {fileID: 6254859100961456903}
