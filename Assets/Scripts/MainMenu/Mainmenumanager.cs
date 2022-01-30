@@ -68,6 +68,7 @@ public class Mainmenumanager : MonoBehaviour
 
     private void tutorial()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Tutorial");
     }
 

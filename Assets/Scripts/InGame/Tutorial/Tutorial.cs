@@ -72,7 +72,7 @@ public class Tutorial : MonoBehaviour
             case 6:
 
                 StartCoroutine("waitPhase6");
-                tutorialLabel.text = "The ammount depends on how the object is placed. Now it's time to make some chaos";
+                tutorialLabel.text = "The ammount depends on how the object is placed. Now it's time to make a mess";
 
                 break;
 
@@ -85,7 +85,7 @@ public class Tutorial : MonoBehaviour
 
             case 8:
 
-                tutorialLabel.text = "Congratulations!!! You are ready.";
+                tutorialLabel.text = "Congratulations!!! You are ready to play. Press the Exit button on the bottom right";
 
                 break;
 
