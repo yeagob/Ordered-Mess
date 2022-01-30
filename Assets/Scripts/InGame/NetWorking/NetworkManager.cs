@@ -27,6 +27,8 @@ using System;
 
         public event Action OnNetworkStartGame;
 
+    PhotonView photonView;
+
         #endregion
 
         #region Unity Callbacks
@@ -36,6 +38,8 @@ using System;
         private void Awake()
         {
             instance = this;
+
+            photonView = GetComponent<PhotonView>();
             panelMatchmajing.SetActive(false);
 
             if (GameManager.singlePlayer)
@@ -123,6 +127,8 @@ using System;
 
         #region Methods
 
+        
+
         void StartLocalGame()
         {
             panelMatchmajing.SetActive(false);
@@ -145,11 +151,26 @@ using System;
 
         }
 
-        #endregion
+    internal void EndGame(int points)
+    {
+        photonView.RPC(nameof(EndGameRPC), RpcTarget.Others, points);
+    }
 
-        #region RPC Methods
+    #endregion
+
+    #region RPC Methods
 
 
+
+    [PunRPC]
+    public void EndGameRPC(int points)
+
+    {
+        if (InGameController.instance.calculatePointPlayer1 > points)
+            InGameController.instance.uIController.playerWonText.text = "YOU WIN";
+        else
+            InGameController.instance.uIController.playerWonText.text = "YOU LOSE";
+    }
         [PunRPC]
         public void StartGame(string oponentName)
         {

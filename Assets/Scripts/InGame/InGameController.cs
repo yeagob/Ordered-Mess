@@ -211,15 +211,15 @@ public class InGameController : MonoBehaviour
             //Final Result!!
             calculatePointPlayer1 = pointFirstRoundPlayer1 + pointSecondRoundPlayer1;
 
-            if (!singlePlayer)
+            if (singlePlayer)
             {
-                if (calculatePointPlayer1 > calculatePointPlayer2)
-                    uIController.playerWonText.text = "Player 1 WIN";
-                else
-                    uIController.playerWonText.text = "Player 2 WIN";
+                uIController.playerWonText.text = "GOOD GAME";
+                
             }
             else
-                    uIController.playerWonText.text = "GOOD GAME";
+            {
+                networkManager.EndGame(calculatePointPlayer1);
+            }
         }
     }
 }
