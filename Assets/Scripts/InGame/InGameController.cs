@@ -95,7 +95,7 @@ public class InGameController : MonoBehaviour
     {
         if (singlePlayer)
         {
-            player.transform.position = spawnPlayer2Round2.transform.position;
+            player.hipTransform.transform.position = spawnPlayer2Round2.transform.position;
             return;
         }
         else
@@ -105,10 +105,10 @@ public class InGameController : MonoBehaviour
         }
         //Player1
         if (!networkManager.multiplayerOn || PhotonNetwork.IsMasterClient)
-            player.transform.position = spawnPlayer1Round2.transform.position;
+            player.hipTransform.position = spawnPlayer1Round2.transform.position;
         else
-        //Player2
-            player.transform.position = spawnPlayer2Round2.transform.position;
+            //Player2
+            player.hipTransform.position = spawnPlayer2Round2.transform.position;
     }
 
     internal void StartGame()
