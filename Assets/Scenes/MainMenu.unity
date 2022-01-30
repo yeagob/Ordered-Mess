@@ -884,7 +884,7 @@ MonoBehaviour:
   findGameButton: {fileID: 1509595673}
   singleButton: {fileID: 2059435532}
   controlsButton: {fileID: 208232740}
-  tutorialButton: {fileID: 208232740}
+  tutorialButton: {fileID: 1804522604}
   exitButton: {fileID: 2087702120}
   volverButton: {fileID: 910795871}
   panelControl: {fileID: 2072109206}

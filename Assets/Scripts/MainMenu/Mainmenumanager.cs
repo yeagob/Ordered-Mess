@@ -68,7 +68,7 @@ public class Mainmenumanager : MonoBehaviour
 
     private void tutorial()
     {
-
+        SceneManager.LoadScene("Tutorial");
     }
 
     private void controls()
