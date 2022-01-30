@@ -88,20 +88,17 @@ public class InGameController : MonoBehaviour
 
         //events
         crono.OnCronoCompleted += CalculatePointsPlayers;
-        crono.OnCronoCompleted += ChangePosPlayers;
+        crono.OnCronoCompleted += ChangePosPlayersRound2;
     }
 
-    private void ChangePosPlayers()
+    private void ChangePosPlayersRound2()
     {
+        doorPlayer2.SetActive(true);
+        doorPlayer1.SetActive(true);
         if (singlePlayer)
         {
             player.hipTransform.transform.position = spawnPlayer2Round2.transform.position;
             return;
-        }
-        else
-        {
-            doorPlayer2.SetActive(true);
-            doorPlayer1.SetActive(true);
         }
         //Player1
         if (!networkManager.multiplayerOn || PhotonNetwork.IsMasterClient)
