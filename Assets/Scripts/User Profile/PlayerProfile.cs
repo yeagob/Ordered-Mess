@@ -11,5 +11,5 @@
         public int executionNumber = 0;
         internal float playerSpeed = 200;
         internal float playerSpeedRun = 500;
-        internal float throwObjectsForce = 30;
+        internal float throwObjectsForce = 50;
     }
